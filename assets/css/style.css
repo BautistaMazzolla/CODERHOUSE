@@ -52,7 +52,7 @@ header {
   justify-content: space-between; /* logo a la izquierda, menú a la derecha */
   align-items: center;
   background-color: #2b7219;
-  padding: 10px 30px;
+  padding: 10px 80px;
   border: 10px solid rgb(15, 14, 14);
 }
 
@@ -64,7 +64,7 @@ header {
 .navbar ul {
   display: flex;
   list-style: none;
-  gap: 10px;
+  gap: 7px;
   margin-right: 100px;
 }
 
@@ -883,632 +883,121 @@ footer a {
   margin: 0 5px;
 }
 
-/* ======================================
-   🖥️ ESTILO PARA ESCRITORIO (desde 481px)
-   ====================================== */
+/* =========================================
+   🇦🇷 FÚTBOL ARGENTINO – GRID
+========================================= */
+/* === GRID PRINCIPAL FÚTBOL ARGENTINO === */
+.mainfutbolargentino {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "noticia-principal tablazonab"
+    "resultadosycruces proximospartidos";
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+/* === ÁREAS === */
+.noticia-principal {
+  grid-area: noticia-principal;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
 
-@media (min-width: 481px) {
-  .menu-icon,
-  .menu-toggle {
-    display: none;
-  }
+.lateral {
+  grid-area: lateral;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resultadosycruces {
+  grid-area: resultadosycruces;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.extra {
+  grid-area: extra;
+}
+
+.noticia-principal img {
+  width: auto
+}
+
+.resultadosviernes li , .cruces li , .proximospartidos li {
+  color: black;
+  font-weight: bold;
 }
 
 
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (INDEX)
-========================================= */
-@media (max-width: 480px) {
+/* MERCADODEPASES */
 
-  /* General */
-  body {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  /* Header */
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-  }
-
-  .imagenlogo {
-    width: 200px;
-    margin-bottom: 10px;
-  }
-
-  /* Menú hamburguesa */
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: #fff;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
-  .navbar ul {
-    display: none;
-    flex-direction: column; /* uno debajo del otro */
-    align-items: center; /* centrado */
-    background-color: #000000; /* el verde del header */
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  .navbar ul li {
-    width: 90%; /* que no ocupen todo el ancho */
-    margin: 4px 0; /* pequeño espacio entre ellos */
-    border-radius: 10px;
-    background-color: white; /* o el color de los botones */
-    overflow: hidden; /* quita bordes feos */
-  }
-
-
-  /* Mostrar menú al hacer clic */
-  .menu-toggle:checked + .menu-icon + .navbar ul {
-    display: flex;
-  }
-
-  /* Imagen principal */
-  .imagenprincipal {
-    width: 90%;
-    height: auto;
-  }
-
-  /* Grid de noticias */
-  .noticias-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .noticias-grid article {
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  /* Formularios */
-  form {
-    width: 90%;
-    padding: 15px;
-  }
-
-  /* Tablas */
-  table {
-    font-size: 0.8rem;
-    width: 95%;
-  }
-
-  /* Imágenes generales */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Footer */
-  footer {
-    font-size: 0.8rem;
-    padding: 15px;
-  }
-
-  footer p {
-    margin: 5px 0;
-  }
-
-  footer a {
-    display: inline-block;
-    margin: 3px;
-  }
+.mercado-pases {
+  padding: 40px;
+  background: #4a9418;
 }
 
-/* =========================
-   MOBILE FUTBOL ARGENTINO
-========================= */
-@media (max-width: 480px) {
-  /* Afecta solo la página Fútbol Argentino */
-  body.futbolargentino {
-    font-size: 14px;
-    text-align: center;
-    background-color: #0b660b;
-  }
-
-  /* Ajustes del encabezado */
-  body.futbolargentino .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0b660b;
-    padding: 10px 0;
-  }
-
-   /* Ícono del menú hamburguesa */
-  body.futbolargentino .menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: #fff;
-  }
-
-  /* Checkbox oculto */
-  body.futbolargentino .menu-toggle {
-    display: none;
-  }
-
-  /* Oculta el menú por defecto */
-  body.futbolargentino .navbar ul {
-    display: none;
-    flex-direction: column; /* uno debajo del otro */
-    align-items: center; /* centrado */
-    background-color: #000000; /* color del fondo del menú */
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  /* Estilo de los ítems del menú */
-  body.futbolargentino .navbar ul li {
-    width: 90%; /* que no ocupe todo el ancho */
-    margin: 4px 0; /* pequeño espacio entre ellos */
-    border-radius: 10px;
-    background-color: white; /* color de fondo de los botones */
-    overflow: hidden; /* quita bordes feos */
-  }
-
-  /* Mostrar menú cuando el checkbox está activado */
-  body.futbolargentino .menu-toggle:checked + .menu-icon + .navbar ul {
-    display: flex;
-  }
-
-
-  /* Ajustes de imágenes y tablas */
-  body.futbolargentino img {
-    max-width: 95%;
-    height: auto;
-  }
-
-  body.futbolargentino table {
-    width: 95%;
-    margin: 0 auto;
-    font-size: 12px;
-    border-collapse: collapse;
-  }
-
-  body.futbolargentino th,
-  body.futbolargentino td {
-    padding: 5px;
-    text-align: center;
-  }
-
-  /* Footer */
-  body.futbolargentino .footer {
-    font-size: 12px;
-    padding: 10px;
-    background-color: black;
-    color: white;
-  }
+.mercado-pases h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #faf8f8;
+  margin-bottom: 30px;
 }
 
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (NACIONAL B)
-========================================= */
-
-
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (COPA ARGENTINA)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (FUTBOL EUROPEO)
-========================================= */
-
-  /* 🔹 Solo aplica dentro del body.futboleuropeo */
-  body.futboleuropeo .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  body.futboleuropeo .imagenlogo {
-    width: 220px;
-  }
-
-  /* 🔹 Menú hamburguesa */
-  body.futboleuropeo .menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: white;
-    margin-top: 10px;
-  }
-
-  body.futboleuropeo .menu-toggle {
-    display: none;
-  }
-
-  body.futboleuropeo .navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000; /* fondo oscuro */
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  body.futboleuropeo .navbar ul li {
-    width: 90%;
-    margin: 4px 0;
-    border-radius: 10px;
-    background-color: white;
-    overflow: hidden;
-  }
-
-  /* Mostrar menú al activar el checkbox */
-  body.futboleuropeo .menu-toggle:checked + .menu-icon + .navbar ul {
-    display: flex;
-  }
-
-  /* 🔹 Submenús */
-  body.futboleuropeo .submenu ul {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-  }
-
-  body.futboleuropeo .submenu:hover ul {
-    display: flex;
-  }
-
-  body.futboleuropeo .submenu ul li a {
-    color: white;
-    padding: 8px 0;
-    display: block;
-  }
-
-  /* 🔹 Contenido principal */
-  body.futboleuropeo .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  body.futboleuropeo .noticia-principal img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  body.futboleuropeo .noticias-secundarias {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  body.futboleuropeo .noticias-secundarias img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  /* 🔹 Sidebar */
-  body.futboleuropeo .sidebar {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  body.futboleuropeo .sidebar ul {
-    padding-left: 15px;
-  }
-
-  /* 🔹 Footer */
-  body.futboleuropeo .footer {
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
-  
-
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (PREMIER LEAGUE)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (LIGA ESPAÑOLA)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (SERIE A)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (CHAMPIONS LEAGUE)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (COPA LIBERTADORES)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (COPA SUDAMERICANA)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (MUNDIAL SUB 20)
-========================================= */
-
-/* =========================================
-   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (AMISTOSOS)
-========================================= */
-
-@media (min-width: 360px) and (max-width: 480px) {
-  /* Fondo general */
-  body.amistosos {
-    background-color: #0b660b;
-    color: white;
-    font-size: 14px;
-    text-align: center;
-  }
-
-  /* Encabezado */
-  body.amistosos .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0b660b;
-    padding: 10px 0;
-  }
-
-  /* Logo */
-  body.amistosos .imagenlogo {
-    max-width: 250px;
-    height: auto;
-  }
-
-  /* Ícono del menú hamburguesa */
-  body.amistosos .menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: #fff;
-    margin: 10px 0;
-  }
-
-  /* Checkbox oculto */
-  body.amistosos .menu-toggle {
-    display: none;
-  }
-
-  /* Navbar cerrada por defecto */
-  body.amistosos .navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  /* Mostrar menú al hacer clic en la hamburguesa */
-  body.amistosos .menu-toggle:checked + .menu-icon + .navbar ul {
-    display: flex;
-  }
-
-  /* Estilo general de los botones del menú */
-  body.amistosos .navbar ul li {
-    width: 90%;
-    margin: 5px 0;
-    border-radius: 10px;
-    background-color: white;
-    overflow: hidden;
-  }
-
-  body.amistosos .navbar ul li a {
-    display: block;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px;
-  }
-
-  /* Submenús */
-  body.amistosos .submenu ul {
-    display: none;
-    flex-direction: column;
-    background-color: #ddd;
-  }
-
-  /* Mostrar submenú al hacer hover o tap */
-  body.amistosos .submenu:hover ul {
-    display: flex;
-  }
-
-  body.amistosos .submenu ul li a {
-    background-color: #f4f4f4;
-    color: black;
-    font-weight: normal;
-  }
-
-  /* Tablas e imágenes */
-  body.amistosos table {
-    width: 95%;
-    margin: 0 auto;
-    font-size: 12px;
-    border-collapse: collapse;
-  }
-
-  body.amistosos th,
-  body.amistosos td {
-    padding: 5px;
-    text-align: center;
-  }
-
-  body.amistosos img {
-    max-width: 95%;
-    height: auto;
-    margin: 10px 0;
-  }
-
-  /* Footer */
-  body.amistosos .footer {
-    font-size: 12px;
-    padding: 10px;
-    background-color: black;
-    color: white;
-  }
+.grid-pases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
-/* =========================================
-📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (CONTACTOS)
-========================================= *
+.jugador {
+  background: rgb(0, 0, 0);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-@media (min-width: 360px) and (max-width: 480px) {
 
-  body.contacto {
-    background-color: #000 !important;
-    color: #fff !important;
-    font-family: Arial, sans-serif;
-    padding: 10px;
-  }
+.jugador img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
 
-  /* Header y logo */
-  .contacto .header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    background-color: #001f3f !important;
-    padding: 10px;
-  }
+.info {
+  padding: 15px;
+}
 
-  .contacto .imagenlogo {
-    width: 200px !important;
-    height: auto;
-    margin-bottom: 10px;
-  }
+.info h3 {
+  font-size: 1.1rem;
+  color: #fffefe;
+  margin-bottom: 5px;
+}
 
-  /* Menú hamburguesa */
-  .contacto .menu-icon {
-    display: block !important;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: #fff;
-  }
+.info p {
+  font-size: 1.1rem;
+  color: #747681;
+  margin-bottom: 5px;
+}
 
-  .contacto .menu-toggle {
-    display: none;
-  }
+.movimiento {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
 
-  .contacto .navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #001f3f;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+.traspaso { color: #2b7219; }
 
-  .contacto .navbar ul li {
-    width: 90%;
-    background-color: white;
-    border-radius: 10px;
-    margin: 5px 0;
-    text-align: center;
-  }
 
-  .contacto .navbar ul li a {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    padding: 10px 0;
-    font-weight: bold;
-  }
+.detalle {
+  font-size: 0.9rem;
+  color: #555;
+}
 
-  /* Mostrar menú al hacer clic */
-  .contacto .menu-toggle:checked + .menu-icon + .navbar ul {
-    display: flex;
-  }
-
-  /* Submenús */
-  .contacto .submenu ul {
-    display: none;
-    flex-direction: column;
-    background-color: #002b5e;
-    border-radius: 8px;
-    padding: 0;
-    margin: 5px 0;
-  }
-
-  .contacto .submenu:hover ul {
-    display: flex;
-  }
-
-  /* Formulario */
-  .contacto main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #111;
-    padding: 20px;
-    border-radius: 12px;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .contacto main form label {
-    align-self: flex-start;
-    margin-left: 5%;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-
-  .contacto main form input,
-  .contacto main form textarea {
-    width: 90%;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 12px;
-  }
-
-  .contacto main form input[type="submit"] {
-    background-color: #00aaff;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    width: 60%;
-  }
-
-  /* Textos generales */
-  .contacto h1,
-  .contacto h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #00aaff;
-  }
-
-  .contacto p,
-  .contacto a {
-    font-size: 0.95rem;
-    color: white;
-    text-align: center;
-  }
-
-  /* Footer */
-  .contacto footer {
-    text-align: center;
-    background-color: #001f3f;
-    color: white;
-    padding: 15px;
-    font-size: 0.9rem;
-  }
