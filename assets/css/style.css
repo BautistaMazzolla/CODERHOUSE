@@ -226,75 +226,29 @@ hr {
   margin: 30px auto;
 }
 
-/* ======== RESULTADOS VIERNES (selector específico del original) ======== */
-.resultadosviernes {
-  background-color: #002d00; 
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.resultadosviernes li {
-  background-color: #fdfdfd;
-  color: rgb(14, 14, 14);
-  padding: 10px;
-  border-radius: 5px;
-  text-shadow: 0 0 5px white;
-  font-weight: bold;
-}
-
-.resultadosviernes td {
-  background-color: #fdfdfd;
-  color: rgb(14, 14, 14);
-  padding: 10px;
-  border-radius: 5px;
-  text-shadow: 0 0 5px white;
-  font-weight: bold;
-}
-
 /* =========================================
    🖼️ IMÁGENES (varias clases del original)
 ========================================= */
 .nachorusso,
 .estevao,
 .resumen,
-.españa,
-.verdinegro {
+.españa {
   border: 3px solid #f6f6f6;
   display: block;
   margin: 30px auto;
   border-radius: 10px;
   max-width: 100%;
-  height: auto;
-}
-
-.mundialsub20, .colombia, .messi {
-  border: 3px solid #0c0c0c;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  width: 700px;
   height: auto;
 }
 
 .imagenprincipal {
-  width: 1000px;
-  border: 3px solid #f6f6f6;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-}
-
-.semifinalesreducido {
-  width: 500px;
-  border: 3px solid #f6f6f6;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
+    width: 1000px;
+    border: 3px solid #f6f6f6;
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* =========================================
@@ -360,50 +314,10 @@ hr {
   color: black;
   margin: 8px 0;
   padding: 8px;
-  border-radius: 5px;
-}
+  border-radius: 5px; }
 
 /* =========================================
-   🏆 COPA ARGENTINA (maincopargentina y relacionados)
-========================================= */
-.maincopargentina {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas:
-    "noticia-principal figura"
-    "estadisticas cruces";
-  gap: 20px;
-  padding: 20px;
-  background-color: #002d00;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-/* primera definición .noticia-principal del original */
-.noticia-principal { grid-area: noticia-principal; background: #050030; padding: 15px; border-radius: 10px; text-align: center; }
-.figura { grid-area: figura; background: #004000; padding: 15px; border-radius: 10px; text-align: center; }
-.cruces { grid-area: cruces; background: #130040; padding: 15px; border-radius: 10px; text-align: center; }
-.estadisticas { grid-area: estadisticas; background: #003300; padding: 15px; border-radius: 10px; }
-
-/* Imágenes y estadística específicas */
-.imagen-campeon, .imagen-figura {
-  width: 100%;
-  border-radius: 10px;
-  margin: 10px 0;
-}
-
-.estadisticas li strong  {
-  color: #000000;
-  font-weight: bold;
-}
-
-.estadisticas li {
-  color: #000000;
-  font-weight: bold;
-}
-
-/* =========================================
-   🧱 CONTENEDOR (primera versión que apareció en el original)
+   🧱 CONTENEDOR 
 ========================================= */
 .contenedor {
   display: grid;
@@ -449,7 +363,7 @@ hr {
 }
 
 /* =========================================
-   🌟 CHAMPIONS (imagen y clases relacionadas)
+   🌟FUTBOL EUROPEO
 ========================================= */
 .championsleague {
   border: 3px solid #f6f6f6;
@@ -467,14 +381,6 @@ hr {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
-}
-
-.españa {
-  border: 3px solid #f6f6f6;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  width: 500px;
 }
 
 /* =========================================
@@ -701,9 +607,9 @@ aside ul li span {
 }
 
 /* =========================================
-   🏆 LIBERTADORES Y CHAMPIONS (mainlibertadores y clases relacionadas)
+   🏆 LIBERTADORES  (mainlibertadores y clases relacionadas)
 ========================================= */
-.mainlibertadores, .mainchampions {
+.mainlibertadores {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
@@ -735,14 +641,8 @@ aside ul li span {
   border-radius: 10px;
 }
 
-.partidoschampions {
-  grid-area: partidos;
-  background: #140949;
-  padding: 20px;
-  border-radius: 10px;
-}
 
-.partido, .partidochampions{
+.partido {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #000000;
@@ -754,38 +654,35 @@ aside ul li span {
   font-weight: bold;
 }
 
-.partidochampions span {
-  color: #fff4f4;
-  font-weight: bold;
-}
 
-.partido:last-child, .partidochampions:last-child {
+
+.partido:last-child {
   border-bottom: none;
 }
 
-.noticiaslibertadores, .noticiaschampions {
+.noticiaslibertadores {
   grid-area: noticias;
   background: #111;
   padding: 20px;
   border-radius: 10px;
 }
 
-.noticiaslibertadores ul , .noticiaschampions ul {
+.noticiaslibertadores ul  {
   list-style: none;
   padding: 0;
 }
 
-.noticiaslibertadores li , .noticiaschampions li {
+.noticiaslibertadores li  {
   padding: 8px 0;
   color: #000;
   font-weight: bold;
 }
 
-.noticias li:last-child, .noticiaschampions li:last-child {
+.noticias li:last-child {
   border-bottom: none;
 }
 
-.tablalibertadores , .tablachampions{
+.tablalibertadores {
   grid-area: tabla;
   background: #111;
   padding: 20px;
@@ -793,78 +690,6 @@ aside ul li span {
   font-weight: bold;
 }
 
-/* =========================================
-   🇦🇷 NACIONAL B (bloque completo)
-========================================= */
-.nacionalb-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* contenido central + sidebar */
-  gap: 25px;
-}
-
-/* Secciones del contenido central */
-.nacionalb-resultados, 
-.nacionalb-tabla, 
-.nacionalb-noticias {
-  background-color: #101820;
-  color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  margin-bottom: 20px;
-}
-
-.nacionalb-resultados .nacionalb-partido {
-  background-color: #1e2a38;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.nacionalb-tabla p {
-  background-color: #243447;
-  padding: 8px;
-  border-radius: 4px;
-  margin: 6px 0;
-}
-
-.nacionalb-noticias p {
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-.nacionalb-img-noticia {
-  width: 50%;
-  border-radius: 8px;
-}
-
-/* Sidebar */
-.nacionalb-sidebar {
-  background-color: #16212f;
-  color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.nacionalb-sidebar h2 {
-  text-align: center;
-  color: #00b7ff;
-  margin-bottom: 10px;
-}
-
-.nacionalb-sidebar p {
-  margin: 6px 0;
-}
-
-/* Imagen principal */
-.nacionalb-imagen-principal {
-  width: 30%;
-  display: block;
-  margin: 15px auto;
-  border-radius: 10px;
-}
 
 /* =========================================
    ⚽ FOOTER
@@ -999,5 +824,713 @@ footer a {
 .detalle {
   font-size: 0.9rem;
   color: #555;
+}
+
+/* Ocultar completamente el checkbox */
+#menu-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Alinear correctamente el ícono del menú */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* ============================= */
+/* 📱 INDEX - MÓVILES 360–480 PX */
+/* ============================= */
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+
+  /* HEADER */
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background-color: #013220;
+    padding: 10px;
+  }
+
+  .imagenlogo {
+    width: 200px !important;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #013220;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .navbar ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  /* Mostrar menú al hacer clic */
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+
+
+  /* IMAGEN PRINCIPAL */
+  .hero img.imagenprincipal {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  }
+
+  /* ============================= */
+/* 📱 FÚTBOL ARGENTINO - MÓVILES 360–480 PX */
+/* ============================= */
+@media (min-width: 360px) and (max-width: 480px) {
+
+  /* HEADER */
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background-color: #013220;
+    padding: 10px;
+  }
+
+  .imagenlogo {
+    width: 200px !important;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #013220;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .navbar ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  /* Mostrar menú al hacer clic */
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+
+  /* Submenús */
+  .submenu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004d26;
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  .submenu:hover ul {
+    display: flex;
+  }
+
+  /* CONTENIDO PRINCIPAL */
+  .mainfutbolargentino {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .noticia-principal img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+
+  .tablazonab, 
+  .resultadosycruces,
+  .proximospartidos {
+    width: 95%;
+    margin-top: 15px;
+  }
+
+  .tablazonab table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .tablazonab th, .tablazonab td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .noticia-secundaria img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .resultadosviernes ul,
+  .cruces ul,
+  .proximospartidos ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .resultadosviernes li,
+  .cruces li,
+  .proximospartidos li {
+    margin: 4px 0;
+    background: #111;
+    color: #fff;
+    padding: 6px;
+    border-radius: 6px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background-color: #013220;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  .footer a {
+    color: #00ff99;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ============================= */
+/* 📱 FÚTBOL EUROPEO / AMISTOSOS - MÓVILES 360–480 PX */
+/* ============================= */
+@media (min-width: 360px) and (max-width: 480px) {
+
+  /* HEADER */
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background-color: #013220;
+    padding: 10px;
+  }
+
+  .imagenlogo {
+    width: 200px !important;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #013220;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .navbar ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+
+  /* CONTENIDO PRINCIPAL */
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .noticia-principal img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+
+  .noticias-secundarias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 95%;
+  }
+
+  .noticias-secundarias article {
+    background-color: #111;
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+  }
+
+  .noticias-secundarias img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar {
+    width: 90%;
+    background-color: #013220;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    background-color: #ffffff;
+    margin: 4px 0;
+    padding: 6px;
+    border-radius: 6px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background-color: #013220;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  .footer a {
+    color: #00ff99;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ============================= */
+/* 📱 COPA LIBERTADORES - MÓVILES 360–480 PX */
+/* ============================= */
+@media (min-width: 360px) and (max-width: 480px) {
+
+  /* HEADER */
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background-color: #013220;
+    padding: 10px;
+  }
+
+  .imagenlogo {
+    width: 200px !important;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-toggle {
+    display: block !important;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #013220;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 0;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex;
+  }
+
+  /* MAIN */
+  .mainlibertadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .noticia-principal {
+    text-align: center;
+    width: 95%;
+  }
+
+  .noticia-principal img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .noticia-principal h2 {
+    font-size: 1.2rem;
+    color: #013220;
+  }
+
+  /* PARTIDOS */
+  .partidoslibertadores {
+    background-color: #013220;
+    color: white;
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .partido {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #00ff99;
+  }
+
+  .partido:last-child {
+    border-bottom: none;
+  }
+
+  /* NOTICIAS */
+  .noticiaslibertadores {
+    width: 90%;
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .noticiaslibertadores ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .noticiaslibertadores li {
+    background-color: #013220;
+    margin: 5px 0;
+    padding: 6px;
+    border-radius: 6px;
+  }
+
+  /* TABLA */
+  .tablalibertadores {
+    width: 90%;
+    margin-top: 15px;
+    background-color: #013220;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .tablalibertadores table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .tablalibertadores th,
+  .tablalibertadores td {
+    border-bottom: 1px solid #00ff99;
+    padding: 6px 0;
+  }
+
+  .tablalibertadores tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #013220;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  footer a {
+    color: #00ff99;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Ajustes mínimos móviles */
+@media (max-width: 576px) {
+  .sudamericana section img {
+    width: 80% !important;
+    max-width: 250px;
+  }
+
+  .sudamericana h1 {
+    font-size: 1.6rem;
+  }
+
+  .sudamericana h3 {
+    font-size: 1.2rem;
+  }
+
+  .sudamericana p.lead {
+    font-size: 1rem !important;
+  }
+}
+
+/* ============================= */
+/* 📱 AMISTOSOS - MÓVILES 360–480 PX */
+/* ============================= */
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+  /* HEADER */
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background-color: #013220;
+    padding: 10px;
+  }
+
+  .imagenlogo {
+    width: 200px !important;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #013220;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .navbar ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+
+
+  /* SECCIÓN PRINCIPAL */
+  .mercado-pases {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mercado-pases h2 {
+    font-size: 1.4rem;
+  }
+
+  .grid-pases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .jugador {
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .jugador img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .info h3 {
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  .traspaso {
+    font-weight: bold;
+    color: #013220;
+  }
+
+  .detalle {
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .footer a {
+    color: #effaf6;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
 
