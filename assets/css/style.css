@@ -1,6 +1,4 @@
-/* =========================================
-   🌍 ESTILOS GENERALES
-========================================= */
+/* GENERAL */
 body {
   background-color: rgb(11, 12, 12);
   color: white;
@@ -11,9 +9,8 @@ body {
 }
 
 .sudamericana {
-  background-color: rgb(12, 149, 212);
-  color: white;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #001a33 0%, #003366 70%, #004c99 100%);
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -44,9 +41,7 @@ h2 {
   margin: 30px auto 15px;
 }
 
-/* =========================================
-   🧭 HEADER Y NAVEGACIÓN
-========================================= */
+/*  HEADER Y BARRA DE NAV */
 header {
   display: flex;
   justify-content: space-between; /* logo a la izquierda, menú a la derecha */
@@ -79,7 +74,7 @@ header {
   color: #ff0800e7;
 }
 
-/* ======== SUBMENÚ ======== */
+/* SUBMENÚ  */
 .submenu {
   position: relative;
 }
@@ -104,9 +99,7 @@ header {
   display: flex;
 }
 
-/* =========================================
-   🧾 FORMULARIO
-========================================= */
+/* FORMULARIO */
 form {
   width: 80%;
   max-width: 600px;
@@ -114,7 +107,6 @@ form {
   background-color: #ffffff;
   padding: 20px 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   text-align: left;
   color: #000;
 }
@@ -135,7 +127,6 @@ form textarea {
   border-radius: 5px;
   margin-bottom: 15px;
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
   text-transform: none;
 }
 
@@ -146,19 +137,15 @@ form input[type="submit"] {
   padding: 12px 25px;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
   font-size: 1rem;
   text-transform: uppercase;
 }
 
 form input[type="submit"]:hover {
   background-color: #005f9e;
-  transform: scale(1.05);
 }
 
-/* =========================================
-   📋 LISTAS, TABLAS Y SEPARADORES
-========================================= */
+/* LISTAS, TABLAS Y SEPARADORES */
 strong {
   display: block;
   text-align: center;
@@ -226,22 +213,17 @@ hr {
   margin: 30px auto;
 }
 
-/* =========================================
-   🖼️ IMÁGENES (varias clases del original)
-========================================= */
-.nachorusso,
-.estevao,
-.resumen,
-.españa {
+/* IMÁGENES */
+
+.nachorusso {
   border: 3px solid #f6f6f6;
   display: block;
   margin: 30px auto;
   border-radius: 10px;
-  max-width: 100%;
-  height: auto;
+  max-width: 550px; 
 }
 
-.imagenprincipal {
+.lavozdelhincha img.imagenprincipal {
     width: 1000px;
     border: 3px solid #f6f6f6;
     display: block;
@@ -251,9 +233,7 @@ hr {
     height: auto;
 }
 
-/* =========================================
-   📰 GRID DE NOTICIAS (general)
-========================================= */
+/* GRID DE NOTICIAS INDEX */
 .noticias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -283,42 +263,9 @@ hr {
   margin: 10px;
 }
 
-/* =========================================
-   🧩 LAYOUT PRINCIPAL (main áreas)
-========================================= */
-.main {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas:
-    "resultados tabla"
-    "noticias tabla";
-  gap: 20px;
-  padding: 20px;
-}
 
-/* Asignar cada área */
-.resultados { grid-area: resultados; }
-.tabla { grid-area: tabla; }
-.noticias { grid-area: noticias; }
+/* FUTBOL EUROPEO */
 
-/* Estilos de secciones */
-.resultados, .tabla, .noticias {
-  background: #003300;
-  padding: 15px;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.partido {
-  background: white;
-  color: black;
-  margin: 8px 0;
-  padding: 8px;
-  border-radius: 5px; }
-
-/* =========================================
-   🧱 CONTENEDOR 
-========================================= */
 .contenedor {
   display: grid;
   grid-template-areas:
@@ -330,47 +277,44 @@ hr {
   padding: 20px;
 }
 
-.noticia-principal {
+.noticiaprincipalchampions {
   grid-area: noticia-principal;
   background: #002244;
   padding: 20px;
   border-radius: 10px;
 }
 
-.noticias-secundarias {
+.noticiassecundariaschampions {
   grid-area: noticias-secundarias;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
-.noticias-secundarias article {
+.noticiassecundariaschampions article {
   background: #001a33;
   padding: 15px;
   border-radius: 10px;
 }
 
-.sidebar {
+.sidebarchampions {
   grid-area: sidebar;
   background: #001122;
   padding: 20px;
   border-radius: 10px;
 }
 
-.sidebar li {
+.sidebarchampions li {
   color: #000407;
   font-weight: bold;
 }
 
-/* =========================================
-   🌟FUTBOL EUROPEO
-========================================= */
 .championsleague {
   border: 3px solid #f6f6f6;
   display: block;
   margin: 30px auto;
   border-radius: 10px;
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -383,9 +327,9 @@ hr {
   height: auto;
 }
 
-/* =========================================
-   🖼 COLLAGE / CARDS / TARJETAS
-========================================= */
+/* 
+🖼 COLLAGE / CARDS / TARJETAS FORMAN PARTE DE LAS LIGAS ESPAÑOLA, SERIE A Y PREMIER LEAGUE QUE USARE EN LA PROXIMA ENTREGA
+
 .collage {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -409,55 +353,8 @@ hr {
   box-shadow: 0 0 15px rgba(255,255,255,0.3);
 }
 
-/* =========================================
-   🧩 CONTENEDOR (segunda versión repetida en el original)
-   --- mantengo la otra definición también (para no romper el cascade)
-========================================= */
-.contenedor {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  padding: 40px 60px;
-  max-width: 1300px;
-  margin: auto;
-}
+*/
 
-.noticia-principal {
-  background: #1a1a1a;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.noticia-principal img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  filter: brightness(70%);
-  transition: 0.4s;
-}
-
-.noticia-principal img:hover {
-  filter: brightness(90%);
-}
-
-.texto-principal {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  color: #fff;
-}
-
-.texto-principal h2 {
-  font-size: 2em;
-  color: #ffb703;
-  margin-bottom: 10px;
-}
-
-.texto-principal p {
-  font-size: 1em;
-  max-width: 600px;
-}
 
 /* =========================================
    🔻 GRID INFERIOR DE NOTICIAS (otro bloque de noticias del original)
@@ -529,11 +426,9 @@ hr {
   margin-bottom: 5px;
 }
 
-/* =========================================
-   📰 SECCIONES DE NOTICIAS y CARD (bloque adicional parecido al anterior,
-   mantenido igual para no perder nada)
-========================================= */
-.noticias {
+/* SECCIONES DE NOTICIAS y CARD DE LAS LIGAS EUROPAS 
+
+.noticias { 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 20px;
@@ -570,9 +465,9 @@ hr {
   font-size: 0.95em;
 }
 
-/* =========================================
-   ASIDE / SIDEBAR (bloque con colores)
-========================================= */
+*/
+
+/* ASIDE / SIDEBAR */
 aside {
   background: #000000;
   padding: 20px;
@@ -606,9 +501,7 @@ aside ul li span {
   font-size: 0.9em;
 }
 
-/* =========================================
-   🏆 LIBERTADORES  (mainlibertadores y clases relacionadas)
-========================================= */
+/* LIBERTADORES */
 .mainlibertadores {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -621,14 +514,14 @@ aside ul li span {
   color: rgb(230, 229, 229);
 }
 
-.noticia-principal {
+.libertadoresnoticia1 {
   grid-area: noticia-principal;
   background: #111;
   padding: 20px;
   border-radius: 10px;
 }
 
-.noticia-principal img {
+.libertadoresnoticia1 img {
   width: 50%;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -660,21 +553,21 @@ aside ul li span {
   border-bottom: none;
 }
 
-.noticiaslibertadores {
+.libertadoresnoticia2 {
   grid-area: noticias;
   background: #111;
   padding: 20px;
   border-radius: 10px;
 }
 
-.noticiaslibertadores ul  {
+.libertadoresnoticia2 ul  {
   list-style: none;
   padding: 0;
 }
 
-.noticiaslibertadores li  {
+.libertadoresnoticia2 li  {
   padding: 8px 0;
-  color: #000;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -691,9 +584,7 @@ aside ul li span {
 }
 
 
-/* =========================================
-   ⚽ FOOTER
-========================================= */
+/* FOOTER */
 footer {
   background-color: #000000;
   text-align: center;
@@ -708,15 +599,13 @@ footer a {
   margin: 0 5px;
 }
 
-/* =========================================
-   🇦🇷 FÚTBOL ARGENTINO – GRID
-========================================= */
-/* === GRID PRINCIPAL FÚTBOL ARGENTINO === */
+/* FUTBOL ARGENTINO */
+
 .mainfutbolargentino {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
-    "noticia-principal tablazonab"
+    "noticiafutbolargentinoprincipal tablazonab"
     "resultadosycruces proximospartidos";
   gap: 20px;
   padding: 20px;
@@ -725,8 +614,8 @@ footer a {
 }
 
 /* === ÁREAS === */
-.noticia-principal {
-  grid-area: noticia-principal;
+.noticiafutbolargentinoprincipal {
+  grid-area: noticiafutbolargentinoprincipal;
   background-color: #1a1a1a;
   color: #fff;
   padding: 20px;
@@ -734,8 +623,8 @@ footer a {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
-.lateral {
-  grid-area: lateral;
+.tablazonab {
+  grid-area: tablazonab;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -748,21 +637,22 @@ footer a {
   gap: 20px;
 }
 
-.extra {
-  grid-area: extra;
+.proximospartidos {
+  grid-area: proximospartidos;
 }
 
-.noticia-principal img {
-  width: auto
+.noticiafutbolargentinoprincipal img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.resultadosviernes li , .cruces li , .proximospartidos li {
+.resultadosviernes li, .cruces li, .proximospartidos li {
   color: black;
   font-weight: bold;
 }
 
-
-/* MERCADODEPASES */
+/* MERCADO DE PASES */
 
 .mercado-pases {
   padding: 40px;
@@ -782,7 +672,7 @@ footer a {
   gap: 25px;
 }
 
-.jugador {
+.baltasar , .paredes , .thiago , .troilo , .mastan {
   background: rgb(0, 0, 0);
   border-radius: 12px;
   overflow: hidden;
@@ -790,8 +680,7 @@ footer a {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-
-.jugador img {
+.baltasar img , .paredes img , .thiago img , .troilo img , .mastan img {
   width: 100%;
   height: 220px;
   object-fit: cover;
@@ -803,13 +692,13 @@ footer a {
 
 .info h3 {
   font-size: 1.1rem;
-  color: #fffefe;
+  color: #0bec30;
   margin-bottom: 5px;
 }
 
 .info p {
   font-size: 1.1rem;
-  color: #747681;
+  color: #d6d8e4;
   margin-bottom: 5px;
 }
 
@@ -826,7 +715,11 @@ footer a {
   color: #555;
 }
 
-/* Ocultar completamente el checkbox */
+
+/* MEDIA QUERY */
+
+
+/* Ocultar el checkbox */
 #menu-toggle {
   display: none;
   position: absolute;
@@ -844,9 +737,9 @@ footer a {
   text-align: center;
 }
 
-/* ============================= */
-/* 📱 INDEX - MÓVILES 360–480 PX */
-/* ============================= */
+
+/*  INDEX MOBILE 360–480 PX */
+
 
 @media (min-width: 360px) and (max-width: 480px) {
 
@@ -912,7 +805,7 @@ footer a {
 
 
   /* IMAGEN PRINCIPAL */
-  .hero img.imagenprincipal {
+  .lavozdelhincha img.imagenprincipal {
     width: 95%;
     height: auto;
     border-radius: 10px;
@@ -921,9 +814,9 @@ footer a {
 
   }
 
-  /* ============================= */
-/* 📱 FÚTBOL ARGENTINO - MÓVILES 360–480 PX */
-/* ============================= */
+  
+/*  FÚTBOL ARGENTINO MOBILE 360–480 PX */
+
 @media (min-width: 360px) and (max-width: 480px) {
 
   /* HEADER */
@@ -985,20 +878,6 @@ footer a {
     display: flex;
   }
 
-  /* Submenús */
-  .submenu ul {
-    display: none;
-    flex-direction: column;
-    background-color: #004d26;
-    border-radius: 8px;
-    margin: 5px 0;
-    padding: 0;
-  }
-
-  .submenu:hover ul {
-    display: flex;
-  }
-
   /* CONTENIDO PRINCIPAL */
   .mainfutbolargentino {
     display: flex;
@@ -1007,13 +886,16 @@ footer a {
     padding: 10px;
   }
 
-  .noticia-principal img {
+  .noticiafutbolargentinoprincipal img {
     width: 95%;
     height: auto;
     border-radius: 10px;
     margin: 10px 0;
   }
 
+.noticiafutbolargentinoprincipal h2 {
+  background-color: #141414;
+}
   .tablazonab, 
   .resultadosycruces,
   .proximospartidos {
@@ -1032,7 +914,7 @@ footer a {
     text-align: center;
   }
 
-  .noticia-secundaria img {
+  .noticiafutbolargentinosecundaria img {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
@@ -1054,30 +936,11 @@ footer a {
     padding: 6px;
     border-radius: 6px;
   }
-
-  /* FOOTER */
-  .footer {
-    background-color: #013220;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-
-  .footer a {
-    color: #00ff99;
-    text-decoration: none;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-  }
 }
 
-/* ============================= */
-/* 📱 FÚTBOL EUROPEO / AMISTOSOS - MÓVILES 360–480 PX */
-/* ============================= */
+
+/*  FÚTBOL EUROPEO MOBILE 360–480 PX */
+
 @media (min-width: 360px) and (max-width: 480px) {
 
   /* HEADER */
@@ -1146,14 +1009,14 @@ footer a {
     padding: 10px;
   }
 
-  .noticia-principal img {
+  .noticiaprincipalchampions img {
     width: 95%;
     height: auto;
     border-radius: 10px;
     margin: 10px 0;
   }
 
-  .noticias-secundarias {
+  .noticiassecundariaschampions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1161,7 +1024,7 @@ footer a {
     width: 95%;
   }
 
-  .noticias-secundarias article {
+  .noticiassecundariaschampions article {
     background-color: #111;
     color: #fff;
     border-radius: 12px;
@@ -1170,13 +1033,13 @@ footer a {
     box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
   }
 
-  .noticias-secundarias img {
+  .noticiassecundariaschampions img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 8px;
   }
 
-  .sidebar {
+  .sidebarchampions {
     width: 90%;
     background-color: #013220;
     color: #fff;
@@ -1185,41 +1048,23 @@ footer a {
     padding: 10px;
   }
 
-  .sidebar ul {
+  .sidebarchampions ul {
     list-style: none;
     padding: 0;
   }
 
-  .sidebar li {
+  .sidebarchampions li {
     background-color: #ffffff;
     margin: 4px 0;
     padding: 6px;
     border-radius: 6px;
   }
 
-  /* FOOTER */
-  .footer {
-    background-color: #013220;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-
-  .footer a {
-    color: #00ff99;
-    text-decoration: none;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-  }
 }
 
-/* ============================= */
-/* 📱 COPA LIBERTADORES - MÓVILES 360–480 PX */
-/* ============================= */
+
+/*  COPA LIBERTADORES MOBILE 360–480 PX */
+
 @media (min-width: 360px) and (max-width: 480px) {
 
   /* HEADER */
@@ -1283,20 +1128,20 @@ footer a {
     padding: 10px;
   }
 
-  .noticia-principal {
+  .libertadoresnoticia1 {
     text-align: center;
     width: 95%;
   }
 
-  .noticia-principal img {
+  .libertadoresnoticia1 img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
   }
 
-  .noticia-principal h2 {
+  .libertadoresnoticia1 h2 {
     font-size: 1.2rem;
-    color: #013220;
+    color: #ffffff;
   }
 
   /* PARTIDOS */
@@ -1321,25 +1166,27 @@ footer a {
   }
 
   /* NOTICIAS */
-  .noticiaslibertadores {
+  .libertadoresnoticia2 {
     width: 90%;
     background-color: #111;
     color: #fff;
     border-radius: 10px;
     padding: 10px;
     margin-top: 15px;
+    font-weight: bold;
   }
 
-  .noticiaslibertadores ul {
+  .libertadoresnoticia2 ul {
     list-style: none;
     padding: 0;
   }
 
-  .noticiaslibertadores li {
+  .libertadoresnoticia2 li {
     background-color: #013220;
     margin: 5px 0;
     padding: 6px;
     border-radius: 6px;
+    color: white;
   }
 
   /* TABLA */
@@ -1368,28 +1215,9 @@ footer a {
   .tablalibertadores tr:last-child td {
     border-bottom: none;
   }
-
-  /* FOOTER */
-  footer {
-    background-color: #013220;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-
-  footer a {
-    color: #00ff99;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
 }
 
-/* Ajustes mínimos móviles */
+/* BOOTSTRAP */
 @media (max-width: 576px) {
   .sudamericana section img {
     width: 80% !important;
@@ -1409,9 +1237,8 @@ footer a {
   }
 }
 
-/* ============================= */
-/* 📱 AMISTOSOS - MÓVILES 360–480 PX */
-/* ============================= */
+
+/* 📱 MERCADO DE PASES MOBILE 360–480 PX */
 
 @media (min-width: 360px) and (max-width: 480px) {
 
@@ -1475,12 +1302,12 @@ footer a {
 
 
   /* SECCIÓN PRINCIPAL */
-  .mercado-pases {
+  .mercadodepases {
     padding: 10px;
     text-align: center;
   }
 
-  .mercado-pases h2 {
+  .mercadodepases h2 {
     font-size: 1.4rem;
   }
 
@@ -1491,7 +1318,7 @@ footer a {
     gap: 15px;
   }
 
-  .jugador {
+  .mastan , .troilo , .thiago , .paredes , .baltasar {
     width: 95%;
     background-color: white;
     border-radius: 10px;
@@ -1499,7 +1326,7 @@ footer a {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
 
-  .jugador img {
+  .mastan img , .troilo img , .thiago img , .paredes img , .baltasar img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -1520,17 +1347,31 @@ footer a {
     color: #333;
   }
 
-  /* FOOTER */
-  .footer {
+}
+
+/* CONTACTO - MOBILE 360PX - 480PX */
+
+@media (max-width: 480px) {
+  main.contacto {
+    grid-template-columns: 1fr; /* 1 sola columna */
     text-align: center;
-    font-size: 0.8rem;
-    padding: 10px;
+    padding: 1rem;
   }
 
-  .footer a {
-    color: #effaf6;
-    text-decoration: none;
-    font-weight: bold;
+  form {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  input, textarea {
+    font-size: 1rem;
   }
 }
 
