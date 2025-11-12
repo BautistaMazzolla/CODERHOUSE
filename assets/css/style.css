@@ -1,0 +1,1514 @@
+/* =========================================
+   🌍 ESTILOS GENERALES
+========================================= */
+body {
+  background-color: rgb(11, 12, 12);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.sudamericana {
+  background-color: rgb(12, 149, 212);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ======== ENCABEZADOS ======== */
+h1 { 
+  text-align: center;
+  color: #FFFFFF; 
+  text-shadow: 2px 2px 6px #0077C8; 
+  font-weight: 800;
+  letter-spacing: 2px;
+  border-top: 3px solid #f6f6f6;
+  border-bottom: 3px solid #f9f7f7;
+  background-color: #050003;
+  padding: 10px;
+}
+
+h2 {
+  background-color: #000508;
+  text-shadow: 2px 2px 6px #e9eced;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  margin: 30px auto 15px;
+}
+
+/* =========================================
+   🧭 HEADER Y NAVEGACIÓN
+========================================= */
+header {
+  display: flex;
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  align-items: center;
+  background-color: #2b7219;
+  padding: 10px 30px;
+  border: 10px solid rgb(15, 14, 14);
+}
+
+.imagenlogo { 
+  width: 150px;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin-right: 100px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ff0800e7;
+}
+
+/* ======== SUBMENÚ ======== */
+.submenu {
+  position: relative;
+}
+
+.submenu ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #2c1147;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.submenu ul li {
+  padding: 5px 0;
+}
+
+.submenu:hover ul {
+  display: flex;
+}
+
+/* =========================================
+   🧾 FORMULARIO
+========================================= */
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: left;
+  color: #000;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #0077c8;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+}
+
+form input[type="submit"] {
+  background-color: #0077c8;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+form input[type="submit"]:hover {
+  background-color: #005f9e;
+  transform: scale(1.05);
+}
+
+/* =========================================
+   📋 LISTAS, TABLAS Y SEPARADORES
+========================================= */
+strong {
+  display: block;
+  text-align: center;
+  margin: 25px auto;
+  font-size: 1.1rem;
+  color: #ffffff;
+  max-width: 900px;
+}
+
+p {
+  text-align: center;
+  max-width: 900px;
+  margin: 10px auto;
+  color: #faf2f2;
+  line-height: 1.6;
+  font-weight: bold;
+  text-transform: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+ul li {
+  background-color: white;
+  border-left: 5px solid #0077c8;
+  margin: 8px 0;
+  padding: 10px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+table {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: rgb(7, 6, 6);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #0077c8;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+hr {
+  width: 80%;
+  max-width: 900px;
+  border: none;
+  border-top: 10px solid #000000;
+  margin: 30px auto;
+}
+
+/* ======== RESULTADOS VIERNES (selector específico del original) ======== */
+.resultadosviernes {
+  background-color: #002d00; 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.resultadosviernes li {
+  background-color: #fdfdfd;
+  color: rgb(14, 14, 14);
+  padding: 10px;
+  border-radius: 5px;
+  text-shadow: 0 0 5px white;
+  font-weight: bold;
+}
+
+.resultadosviernes td {
+  background-color: #fdfdfd;
+  color: rgb(14, 14, 14);
+  padding: 10px;
+  border-radius: 5px;
+  text-shadow: 0 0 5px white;
+  font-weight: bold;
+}
+
+/* =========================================
+   🖼️ IMÁGENES (varias clases del original)
+========================================= */
+.nachorusso,
+.estevao,
+.resumen,
+.españa,
+.verdinegro {
+  border: 3px solid #f6f6f6;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.mundialsub20, .colombia, .messi {
+  border: 3px solid #0c0c0c;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: 700px;
+  height: auto;
+}
+
+.imagenprincipal {
+  width: 1000px;
+  border: 3px solid #f6f6f6;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.semifinalesreducido {
+  width: 500px;
+  border: 3px solid #f6f6f6;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   📰 GRID DE NOTICIAS (general)
+========================================= */
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.noticias-grid article {
+  background-color: rgb(19, 18, 18);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.noticias-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.noticias-grid h3 {
+  margin: 10px;
+  color: #007a33;
+}
+.noticias-grid p {
+  margin: 10px;
+}
+
+/* =========================================
+   🧩 LAYOUT PRINCIPAL (main áreas)
+========================================= */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "resultados tabla"
+    "noticias tabla";
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Asignar cada área */
+.resultados { grid-area: resultados; }
+.tabla { grid-area: tabla; }
+.noticias { grid-area: noticias; }
+
+/* Estilos de secciones */
+.resultados, .tabla, .noticias {
+  background: #003300;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.partido {
+  background: white;
+  color: black;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* =========================================
+   🏆 COPA ARGENTINA (maincopargentina y relacionados)
+========================================= */
+.maincopargentina {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "noticia-principal figura"
+    "estadisticas cruces";
+  gap: 20px;
+  padding: 20px;
+  background-color: #002d00;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* primera definición .noticia-principal del original */
+.noticia-principal { grid-area: noticia-principal; background: #050030; padding: 15px; border-radius: 10px; text-align: center; }
+.figura { grid-area: figura; background: #004000; padding: 15px; border-radius: 10px; text-align: center; }
+.cruces { grid-area: cruces; background: #130040; padding: 15px; border-radius: 10px; text-align: center; }
+.estadisticas { grid-area: estadisticas; background: #003300; padding: 15px; border-radius: 10px; }
+
+/* Imágenes y estadística específicas */
+.imagen-campeon, .imagen-figura {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.estadisticas li strong  {
+  color: #000000;
+  font-weight: bold;
+}
+
+.estadisticas li {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* =========================================
+   🧱 CONTENEDOR (primera versión que apareció en el original)
+========================================= */
+.contenedor {
+  display: grid;
+  grid-template-areas:
+    "noticia-principal noticia-principal sidebar"
+    "noticias-secundarias noticias-secundarias sidebar "
+    "footer footer footer";
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.noticia-principal {
+  grid-area: noticia-principal;
+  background: #002244;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.noticias-secundarias {
+  grid-area: noticias-secundarias;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.noticias-secundarias article {
+  background: #001a33;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #001122;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sidebar li {
+  color: #000407;
+  font-weight: bold;
+}
+
+/* =========================================
+   🌟 CHAMPIONS (imagen y clases relacionadas)
+========================================= */
+.championsleague {
+  border: 3px solid #f6f6f6;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.real, .lautaro, .city {
+  border: 3px solid #f6f6f6;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.españa {
+  border: 3px solid #f6f6f6;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: 500px;
+}
+
+/* =========================================
+   🖼 COLLAGE / CARDS / TARJETAS
+========================================= */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  padding: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* =========================================
+   🧩 CONTENEDOR (segunda versión repetida en el original)
+   --- mantengo la otra definición también (para no romper el cascade)
+========================================= */
+.contenedor {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 40px 60px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.noticia-principal {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.noticia-principal img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: 0.4s;
+}
+
+.noticia-principal img:hover {
+  filter: brightness(90%);
+}
+
+.texto-principal {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+}
+
+.texto-principal h2 {
+  font-size: 2em;
+  color: #ffb703;
+  margin-bottom: 10px;
+}
+
+.texto-principal p {
+  font-size: 1em;
+  max-width: 600px;
+}
+
+/* =========================================
+   🔻 GRID INFERIOR DE NOTICIAS (otro bloque de noticias del original)
+========================================= */
+.noticias-secundarias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 50px auto;
+  padding: 0 60px;
+  max-width: 1300px;
+}
+
+.card {
+  background: #171717;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 15px;
+}
+
+.card .info h5 {
+  color: #ffb703;
+  margin-bottom: 8px;
+}
+
+.card .info p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+/* =========================================
+   📰 SIDEBAR DE TITULARES (bloque repetido del original)
+========================================= */
+.titulares {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.titular {
+  background: #171717;
+  border-left: 4px solid #ffb703;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.titular:hover {
+  transform: translateX(5px);
+  background-color: #222;
+}
+
+.titular h4 {
+  color: #ffb703;
+  margin-bottom: 5px;
+}
+
+/* =========================================
+   📰 SECCIONES DE NOTICIAS y CARD (bloque adicional parecido al anterior,
+   mantenido igual para no perder nada)
+========================================= */
+.noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: auto;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  color: #00b4d8;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #ddd;
+  font-size: 0.95em;
+}
+
+/* =========================================
+   ASIDE / SIDEBAR (bloque con colores)
+========================================= */
+aside {
+  background: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+aside h3 {
+  color: #00b4d8;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  color: #050003;
+}
+
+aside ul li:last-child {
+  border-bottom: none;
+}
+
+aside ul li span {
+  color: #000000;
+  font-size: 0.9em;
+}
+
+/* =========================================
+   🏆 LIBERTADORES Y CHAMPIONS (mainlibertadores y clases relacionadas)
+========================================= */
+.mainlibertadores, .mainchampions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "noticia-principal partidos"
+    "noticias tabla";
+  gap: 20px;
+  padding: 20px;
+  background-color: #001f0f;
+  color: rgb(230, 229, 229);
+}
+
+.noticia-principal {
+  grid-area: noticia-principal;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.noticia-principal img {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.partidoslibertadores {
+  grid-area: partidos;
+  background: #09022b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.partidoschampions {
+  grid-area: partidos;
+  background: #140949;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.partido, .partidochampions{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+}
+
+.partido span {
+  color: #0c0101;
+  font-weight: bold;
+}
+
+.partidochampions span {
+  color: #fff4f4;
+  font-weight: bold;
+}
+
+.partido:last-child, .partidochampions:last-child {
+  border-bottom: none;
+}
+
+.noticiaslibertadores, .noticiaschampions {
+  grid-area: noticias;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.noticiaslibertadores ul , .noticiaschampions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.noticiaslibertadores li , .noticiaschampions li {
+  padding: 8px 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.noticias li:last-child, .noticiaschampions li:last-child {
+  border-bottom: none;
+}
+
+.tablalibertadores , .tablachampions{
+  grid-area: tabla;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* =========================================
+   🇦🇷 NACIONAL B (bloque completo)
+========================================= */
+.nacionalb-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* contenido central + sidebar */
+  gap: 25px;
+}
+
+/* Secciones del contenido central */
+.nacionalb-resultados, 
+.nacionalb-tabla, 
+.nacionalb-noticias {
+  background-color: #101820;
+  color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+
+.nacionalb-resultados .nacionalb-partido {
+  background-color: #1e2a38;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.nacionalb-tabla p {
+  background-color: #243447;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+.nacionalb-noticias p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.nacionalb-img-noticia {
+  width: 50%;
+  border-radius: 8px;
+}
+
+/* Sidebar */
+.nacionalb-sidebar {
+  background-color: #16212f;
+  color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.nacionalb-sidebar h2 {
+  text-align: center;
+  color: #00b7ff;
+  margin-bottom: 10px;
+}
+
+.nacionalb-sidebar p {
+  margin: 6px 0;
+}
+
+/* Imagen principal */
+.nacionalb-imagen-principal {
+  width: 30%;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+/* =========================================
+   ⚽ FOOTER
+========================================= */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 40px
+}
+
+footer a {
+  color: #0077c8;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* ======================================
+   🖥️ ESTILO PARA ESCRITORIO (desde 481px)
+   ====================================== */
+
+
+@media (min-width: 481px) {
+  .menu-icon,
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (INDEX)
+========================================= */
+@media (max-width: 480px) {
+
+  /* General */
+  body {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .imagenlogo {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  /* Menú hamburguesa */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column; /* uno debajo del otro */
+    align-items: center; /* centrado */
+    background-color: #000000; /* el verde del header */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 90%; /* que no ocupen todo el ancho */
+    margin: 4px 0; /* pequeño espacio entre ellos */
+    border-radius: 10px;
+    background-color: white; /* o el color de los botones */
+    overflow: hidden; /* quita bordes feos */
+  }
+
+
+  /* Mostrar menú al hacer clic */
+  .menu-toggle:checked + .menu-icon + .navbar ul {
+    display: flex;
+  }
+
+  /* Imagen principal */
+  .imagenprincipal {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Grid de noticias */
+  .noticias-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .noticias-grid article {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  /* Formularios */
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Tablas */
+  table {
+    font-size: 0.8rem;
+    width: 95%;
+  }
+
+  /* Imágenes generales */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  footer a {
+    display: inline-block;
+    margin: 3px;
+  }
+}
+
+/* =========================
+   MOBILE FUTBOL ARGENTINO
+========================= */
+@media (max-width: 480px) {
+  /* Afecta solo la página Fútbol Argentino */
+  body.futbolargentino {
+    font-size: 14px;
+    text-align: center;
+    background-color: #0b660b;
+  }
+
+  /* Ajustes del encabezado */
+  body.futbolargentino .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b660b;
+    padding: 10px 0;
+  }
+
+   /* Ícono del menú hamburguesa */
+  body.futbolargentino .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  /* Checkbox oculto */
+  body.futbolargentino .menu-toggle {
+    display: none;
+  }
+
+  /* Oculta el menú por defecto */
+  body.futbolargentino .navbar ul {
+    display: none;
+    flex-direction: column; /* uno debajo del otro */
+    align-items: center; /* centrado */
+    background-color: #000000; /* color del fondo del menú */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Estilo de los ítems del menú */
+  body.futbolargentino .navbar ul li {
+    width: 90%; /* que no ocupe todo el ancho */
+    margin: 4px 0; /* pequeño espacio entre ellos */
+    border-radius: 10px;
+    background-color: white; /* color de fondo de los botones */
+    overflow: hidden; /* quita bordes feos */
+  }
+
+  /* Mostrar menú cuando el checkbox está activado */
+  body.futbolargentino .menu-toggle:checked + .menu-icon + .navbar ul {
+    display: flex;
+  }
+
+
+  /* Ajustes de imágenes y tablas */
+  body.futbolargentino img {
+    max-width: 95%;
+    height: auto;
+  }
+
+  body.futbolargentino table {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 12px;
+    border-collapse: collapse;
+  }
+
+  body.futbolargentino th,
+  body.futbolargentino td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  /* Footer */
+  body.futbolargentino .footer {
+    font-size: 12px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+  }
+}
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (NACIONAL B)
+========================================= */
+
+
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (COPA ARGENTINA)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (FUTBOL EUROPEO)
+========================================= */
+
+  /* 🔹 Solo aplica dentro del body.futboleuropeo */
+  body.futboleuropeo .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  body.futboleuropeo .imagenlogo {
+    width: 220px;
+  }
+
+  /* 🔹 Menú hamburguesa */
+  body.futboleuropeo .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 10px;
+  }
+
+  body.futboleuropeo .menu-toggle {
+    display: none;
+  }
+
+  body.futboleuropeo .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* fondo oscuro */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  body.futboleuropeo .navbar ul li {
+    width: 90%;
+    margin: 4px 0;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  /* Mostrar menú al activar el checkbox */
+  body.futboleuropeo .menu-toggle:checked + .menu-icon + .navbar ul {
+    display: flex;
+  }
+
+  /* 🔹 Submenús */
+  body.futboleuropeo .submenu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+  }
+
+  body.futboleuropeo .submenu:hover ul {
+    display: flex;
+  }
+
+  body.futboleuropeo .submenu ul li a {
+    color: white;
+    padding: 8px 0;
+    display: block;
+  }
+
+  /* 🔹 Contenido principal */
+  body.futboleuropeo .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  body.futboleuropeo .noticia-principal img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  body.futboleuropeo .noticias-secundarias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  body.futboleuropeo .noticias-secundarias img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* 🔹 Sidebar */
+  body.futboleuropeo .sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  body.futboleuropeo .sidebar ul {
+    padding-left: 15px;
+  }
+
+  /* 🔹 Footer */
+  body.futboleuropeo .footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  
+
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (PREMIER LEAGUE)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (LIGA ESPAÑOLA)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (SERIE A)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (CHAMPIONS LEAGUE)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (COPA LIBERTADORES)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (COPA SUDAMERICANA)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (MUNDIAL SUB 20)
+========================================= */
+
+/* =========================================
+   📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (AMISTOSOS)
+========================================= */
+
+@media (min-width: 360px) and (max-width: 480px) {
+  /* Fondo general */
+  body.amistosos {
+    background-color: #0b660b;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Encabezado */
+  body.amistosos .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b660b;
+    padding: 10px 0;
+  }
+
+  /* Logo */
+  body.amistosos .imagenlogo {
+    max-width: 250px;
+    height: auto;
+  }
+
+  /* Ícono del menú hamburguesa */
+  body.amistosos .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 10px 0;
+  }
+
+  /* Checkbox oculto */
+  body.amistosos .menu-toggle {
+    display: none;
+  }
+
+  /* Navbar cerrada por defecto */
+  body.amistosos .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Mostrar menú al hacer clic en la hamburguesa */
+  body.amistosos .menu-toggle:checked + .menu-icon + .navbar ul {
+    display: flex;
+  }
+
+  /* Estilo general de los botones del menú */
+  body.amistosos .navbar ul li {
+    width: 90%;
+    margin: 5px 0;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  body.amistosos .navbar ul li a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  /* Submenús */
+  body.amistosos .submenu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #ddd;
+  }
+
+  /* Mostrar submenú al hacer hover o tap */
+  body.amistosos .submenu:hover ul {
+    display: flex;
+  }
+
+  body.amistosos .submenu ul li a {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: normal;
+  }
+
+  /* Tablas e imágenes */
+  body.amistosos table {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 12px;
+    border-collapse: collapse;
+  }
+
+  body.amistosos th,
+  body.amistosos td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  body.amistosos img {
+    max-width: 95%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* Footer */
+  body.amistosos .footer {
+    font-size: 12px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+  }
+}
+
+/* =========================================
+📱 DISEÑO RESPONSIVE MOBILE (360px a 480px) (CONTACTOS)
+========================================= *
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+  body.contacto {
+    background-color: #000 !important;
+    color: #fff !important;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+  }
+
+  /* Header y logo */
+  .contacto .header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background-color: #001f3f !important;
+    padding: 10px;
+  }
+
+  .contacto .imagenlogo {
+    width: 200px !important;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Menú hamburguesa */
+  .contacto .menu-icon {
+    display: block !important;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  .contacto .menu-toggle {
+    display: none;
+  }
+
+  .contacto .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #001f3f;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contacto .navbar ul li {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .contacto .navbar ul li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  /* Mostrar menú al hacer clic */
+  .contacto .menu-toggle:checked + .menu-icon + .navbar ul {
+    display: flex;
+  }
+
+  /* Submenús */
+  .contacto .submenu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #002b5e;
+    border-radius: 8px;
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  .contacto .submenu:hover ul {
+    display: flex;
+  }
+
+  /* Formulario */
+  .contacto main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contacto main form label {
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .contacto main form input,
+  .contacto main form textarea {
+    width: 90%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 12px;
+  }
+
+  .contacto main form input[type="submit"] {
+    background-color: #00aaff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 60%;
+  }
+
+  /* Textos generales */
+  .contacto h1,
+  .contacto h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #00aaff;
+  }
+
+  .contacto p,
+  .contacto a {
+    font-size: 0.95rem;
+    color: white;
+    text-align: center;
+  }
+
+  /* Footer */
+  .contacto footer {
+    text-align: center;
+    background-color: #001f3f;
+    color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
