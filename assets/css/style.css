@@ -1009,11 +1009,11 @@ footer a {
     padding: 10px;
   }
 
-  .noticiaprincipalchampions img {
-    width: 95%;
+  .noticiaprincipalchampions img .championsleague {
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
   .noticiassecundariaschampions {
