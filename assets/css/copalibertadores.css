@@ -1,0 +1,75 @@
+.mainlibertadores {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "noticia-principal partidos" "noticias tabla";
+  gap: 20px;
+  padding: 20px;
+  background-color: #001f0f;
+  color: rgb(230, 229, 229);
+}
+
+.libertadoresnoticia1 {
+  grid-area: noticia-principal;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.libertadoresnoticia1 img {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.partidoslibertadores {
+  grid-area: partidos;
+  background: #09022b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.partido {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+}
+
+.partido span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.partido:last-child {
+  border-bottom: none;
+}
+
+.libertadoresnoticia2 {
+  grid-area: noticias;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.libertadoresnoticia2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.libertadoresnoticia2 li {
+  padding: 8px 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.noticias li:last-child {
+  border-bottom: none;
+}
+
+.tablalibertadores {
+  grid-area: tabla;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}/*# sourceMappingURL=copalibertadores.css.map */

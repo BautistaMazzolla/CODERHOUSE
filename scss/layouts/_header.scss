@@ -1,0 +1,58 @@
+/*  HEADER Y BARRA DE NAV */
+header {
+  display: flex;
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  align-items: center;
+  background-color: #2b7219;
+  padding: 10px 80px;
+  border: 10px solid rgb(15, 14, 14);
+}
+
+.imagenlogo { 
+  width: 150px;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 7px;
+  margin-right: 100px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ff0800e7;
+}
+
+/* SUBMENÚ  */
+.submenu {
+  position: relative;
+}
+
+.submenu ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #2c1147;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.submenu ul li {
+  padding: 5px 0;
+}
+
+.submenu:hover ul {
+  display: flex;
+}
+

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* FUTBOL ARGENTINO */
+.mainfutbolargentino {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "noticiafutbolargentinoprincipal tablazonab" "resultadosycruces proximospartidos";
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === ÁREAS === */
+.noticiafutbolargentinoprincipal {
+  grid-area: noticiafutbolargentinoprincipal;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.tablazonab {
+  grid-area: tablazonab;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resultadosycruces {
+  grid-area: resultadosycruces;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.proximospartidos {
+  grid-area: proximospartidos;
+}
+
+.noticiafutbolargentinoprincipal img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.resultadosviernes li, .cruces li, .proximospartidos li {
+  color: black;
+  font-weight: bold;
+}/*# sourceMappingURL=futbolargentino.css.map */
