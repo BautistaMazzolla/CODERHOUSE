@@ -1,4 +1,6 @@
-
+@use "sass:map";
+@use "../utilities/maps" as mapa;
+@use "../utilities/mixin" as mix;
 
 .futboleuropeo {
   .contenedor {
@@ -12,22 +14,37 @@
     padding: 20px;
   }
 
+  /* ==========================
+     NOTICIA PRINCIPAL
+  =========================== */
   .noticiaprincipalchampions {
     grid-area: noticia-principal;
-    background: #002244;
-    padding: 20px;
-    border-radius: 10px;
+    @include mix.caja(map.get(mapa.$colores, fondo-principaleuropa));
+
+    /* Fade-in suave */
+    opacity: 0;
+    animation: fadeIn 0.7s ease forwards;
 
     .championsleague {
-      border: 3px solid #f6f6f6;
+      border: 3px solid map.get(mapa.$colores, borde-claroeuropa);
       display: block;
       margin: 30px auto;
       border-radius: 10px;
       max-width: 70%;
       height: auto;
+
+      /* Zoom leve en hover */
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 
+  /* ==========================
+     NOTICIAS SECUNDARIAS
+  =========================== */
   .noticiassecundariaschampions {
     grid-area: noticias-secundarias;
     display: grid;
@@ -35,30 +52,84 @@
     gap: 15px;
 
     article {
-      background: #001a33;
-      padding: 15px;
-      border-radius: 10px;
+      @include mix.caja(map.get(mapa.$colores, fondo-secundarioeuropa), 15px);
+
+      /* Slide-up suave */
+      opacity: 0;
+      transform: translateY(10px);
+      animation: slideUp 0.6s ease forwards;
+
+      /* Hover con sombra */
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
 
       img {
-        border: 3px solid #f6f6f6;
+        border: 3px solid map.get(mapa.$colores, borde-claroeuropa);
         display: block;
         margin: 30px auto;
         border-radius: 10px;
         max-width: 100%;
         height: auto;
+
+        /* Zoom leve */
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.04);
+        }
       }
     }
   }
 
+  /* ==========================
+     SIDEBAR
+  =========================== */
   .sidebarchampions {
     grid-area: sidebar;
-    background: #001122;
-    padding: 20px;
-    border-radius: 10px;
+    @include mix.caja(map.get(mapa.$colores, fondo-sidebareuropa));
+
+    /* Fade-in + pequeño slide */
+    opacity: 0;
+    transform: translateX(10px);
+    animation: slideIn 0.7s ease forwards;
 
     li {
-      color: #000407;
+      color: map.get(mapa.$colores, texto-sidebareuropa);
       font-weight: bold;
     }
+  }
+}
+
+/* ==========================
+   KEYFRAMES
+========================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

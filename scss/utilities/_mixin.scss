@@ -1,0 +1,5 @@
+@mixin caja($color-fondo, $padding: 20px, $radius: 10px) {
+  background: $color-fondo;
+  padding: $padding;
+  border-radius: $radius;
+}

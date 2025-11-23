@@ -1,17 +1,29 @@
 
+@use "sass:map";
+@use "../utilities/maps" as mapa;
+
+/* ==========================
+   IMAGEN PRINCIPAL
+========================== */
 .lavozdelhincha {
   img.imagenprincipal {
     width: 1000px;
-    border: 3px solid #f6f6f6;
+    border: 3px solid map.get(mapa.$colores, borde-claro);
     display: block;
     margin: 30px auto;
     border-radius: 10px;
     max-width: 100%;
     height: auto;
+
+    /* ⭐ Fade-in suave */
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
   }
 }
 
-/* GRID DE NOTICIAS INDEX */
+/* ==========================
+   GRID DE NOTICIAS INDEX
+========================== */
 .noticias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -19,25 +31,65 @@
   padding: 20px;
 
   article {
-    background-color: rgb(19, 18, 18);
-    border: 1px solid #ddd;
+    background-color: map.get(mapa.$colores, fondo-noticia);
+    border: 1px solid map.get(mapa.$colores, borde-noticia);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* ⭐ Aparición suave con slide-up */
+    opacity: 0;
+    animation: slideUp 0.6s ease forwards;
+
+    /* ⭐ Sombra suave en hover */
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
   }
 
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    /* ⭐ Zoom leve en hover */
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   h3 {
     margin: 10px;
-    color: #007a33;
+    color: map.get(mapa.$colores, titulo-verde);
   }
 
   p {
     margin: 10px;
+  }
+}
+
+/* ==========================
+   KEYFRAMES
+========================== */
+
+/* ⭐ Fade-in general */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ⭐ Slide-up suave */
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
   }
 }

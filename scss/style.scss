@@ -1,4 +1,11 @@
 /* ==========================
+   UTILITIES 
+========================== */
+@use "utilities/maps";
+@use "utilities/mixin";
+@use "utilities/extend";
+
+/* ==========================
    BASE
 ========================== */
 @use "base/estilosglobales";

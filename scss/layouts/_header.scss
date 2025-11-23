@@ -1,17 +1,46 @@
 /*  HEADER Y BARRA DE NAV */
+@use "sass:map";
+@use "../utilities/maps" as mapa;
 
+
+/* Animación entrada suave */
+@keyframes fadeInHeader {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación para submenú */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover suave */
+@keyframes linkHover {
+  from { letter-spacing: 0px; }
+  to   { letter-spacing: 1px; }
+}
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2b7219;
+  background-color: map.get(mapa.$colores, fondoheader );
   padding: 10px 80px;
-  border: 10px solid rgb(15, 14, 14);
+  border: 10px solid map.get(mapa.$colores, bordeheader );
+
+  /* Animación de entrada del header */
+  animation: fadeInHeader 0.6s ease-out both;
 
   .imagenlogo { 
     width: 150px;
     height: auto;
+    transition: transform 0.25s ease;
+
+    /* Efecto elegante */
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .navbar {
@@ -24,19 +53,21 @@ header {
       li {
         a {
           text-decoration: none;
-          color: rgb(0, 0, 0);
+          color: map.get(mapa.$colores, textoheader );
           font-weight: 600;
-          transition: color 0.3s ease;
+          transition: color 0.3s ease, transform 0.25s ease;
 
           &:hover {
-            color: #ff0800e7;
+            color: map.get(mapa.$colores, hoverheader );
+            transform: translateY(-2px);
+            animation: linkHover 0.3s ease forwards;
           }
         }
       }
     }
   }
 
-  /* SUBMENÚ  */
+  /* SUBMENÚ */
   .submenu {
     position: relative;
 
@@ -45,19 +76,27 @@ header {
       position: absolute;
       top: 35px;
       left: 0;
-      background: #2c1147;
+      background: map.get(mapa.$colores, submenu-fondoheader );
       padding: 10px;
       border-radius: 5px;
       flex-direction: column;
       min-width: 160px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-5px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
 
       li {
         padding: 5px 0;
       }
     }
 
+    /* Efecto slide-down suave */
     &:hover ul {
       display: flex;
+      animation: slideDown 0.25s ease forwards;
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 }

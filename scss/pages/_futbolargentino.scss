@@ -1,4 +1,9 @@
+@use "sass:map";
+@use "../utilities/maps" as mapa;
+@use "../utilities/extend" as ext;
+
 .futbolargentino {
+
   .mainfutbolargentino {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -11,14 +16,25 @@
     margin: 0 auto;
   }
 
-  /* === NOTICIA PRINCIPAL === */
+  /* ==========================
+     NOTICIA PRINCIPAL
+  ========================== */
   .noticiafutbolargentinoprincipal {
     grid-area: noticiafutbolargentinoprincipal;
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    @extend %card !optional;
+    background-color: map.get(mapa.$colores, fondo-principalarg);
+    color: map.get(mapa.$colores, texto-blancoarg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+    transition: transform .25s ease, box-shadow .25s ease;
+
+    /* Animación sutil */
+    opacity: 0;
+    animation: fadeIn .7s ease forwards;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+    }
 
     img {
       width: 100%;
@@ -27,29 +43,33 @@
     }
   }
 
-  /* === COLUMNA DERECHA === */
+  /* ==========================
+     COLUMNA DERECHA
+  ========================== */
   .tablazonab {
     grid-area: tablazonab;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    .tabla {
-      table {
-        width: 100%;
-        border-collapse: collapse;
+    .tabla table {
+      width: 100%;
+      border-collapse: collapse;
 
-        th, td {
-          padding: 8px;
-          text-align: center;
-        }
+      th, td {
+        padding: 8px;
+        text-align: center;
       }
     }
 
     .noticiafutbolargentinosecundaria {
-      background: #111;
-      padding: 15px;
-      border-radius: 10px;
+      @extend %card !optional;
+      background: map.get(mapa.$colores, fondo-secundarioarg);
+      transition: transform .25s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
 
       img {
         width: 100%;
@@ -59,7 +79,9 @@
     }
   }
 
-  /* === ABAJO IZQUIERDA === */
+  /* ==========================
+     RESULTADOS Y CRUCES
+  ========================== */
   .resultadosycruces {
     grid-area: resultadosycruces;
     display: flex;
@@ -68,27 +90,45 @@
 
     .resultadosviernes,
     .cruces {
-      background: #1a1a1a;
-      padding: 15px;
-      border-radius: 10px;
+      @extend %card !optional;
+      background: map.get(mapa.$colores, fondo-principalarg);
+      transition: box-shadow .25s ease;
+
+      &:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+      }
 
       ul li {
-        color: black;
+        color: map.get(mapa.$colores, texto-negroarg);
         font-weight: bold;
       }
     }
   }
 
-  /* === ABAJO DERECHA === */
+  /* ==========================
+     PRÓXIMOS PARTIDOS
+  ========================== */
   .proximospartidos {
     grid-area: proximospartidos;
-    background: #1a1a1a;
-    padding: 15px;
-    border-radius: 10px;
+    @extend %card !optional;
+    background: map.get(mapa.$colores, fondo-principalarg);
+    transition: box-shadow .25s ease;
+
+    &:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+    }
 
     ul li {
-      color: black;
+      color: map.get(mapa.$colores, texto-negroarg);
       font-weight: bold;
     }
   }
+}
+
+/* ==========================
+   ANIMACIONES
+========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }

@@ -2,15 +2,32 @@
    MERCADO DE PASES (PÁGINA)
 ========================== */
 
+@use "sass:map";
+@use "../utilities/maps" as mapa;
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .mercadodepases {
   padding: 40px;
-  background: #4a9418;
+  background: map.get(mapa.$colores, fondo-verdemdp );
 
   h2 {
     text-align: center;
     font-size: 2rem;
-    color: #faf8f8;
+    color: map.get(mapa.$colores, texto-blancomdp2 );
     margin-bottom: 30px;
+
+    animation: fadeInUp 0.6s ease both;
   }
 
   .grid-pases {
@@ -23,11 +40,21 @@
     .thiago,
     .troilo,
     .mastan {
-      background: rgb(0, 0, 0);
+      background: map.get(mapa.$colores, fondo-cardmdp );
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 10px map.get(mapa.$colores, sombra-cardmdp );
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      /* Animación al cargar */
+      animation: fadeInUp 0.6s ease both;
+
+      /* Animación al pasar el mouse */
+      &:hover {
+        transform: scale(1.06);
+        box-shadow: 0 8px 18px map.get(mapa.$colores, sombra-cardmdp );
+        cursor: pointer;
+      }
 
       img {
         width: 100%;
@@ -40,13 +67,13 @@
 
         h3 {
           font-size: 1.1rem;
-          color: #0bec30;
+          color: map.get(mapa.$colores, texto-verdemdp );
           margin-bottom: 5px;
         }
 
         p {
           font-size: 1.1rem;
-          color: #fffefe;
+          color: map.get(mapa.$colores, texto-blancomdp );
           margin-bottom: 5px;
         }
 
@@ -56,12 +83,12 @@
         }
 
         .traspaso {
-          color: #ffffff;
+          color: map.get(mapa.$colores, texto-blancomdp );
         }
 
         .detalle {
           font-size: 0.9rem;
-          color: #ffffff;
+          color: map.get(mapa.$colores, texto-blancomdp );
         }
       }
     }

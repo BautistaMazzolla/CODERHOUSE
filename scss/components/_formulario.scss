@@ -1,17 +1,18 @@
 /* FORMULARIO */
 
-
+@use "sass:map";
+@use "../utilities/maps" as mapa;
 
 
 form {
   width: 80%;
   max-width: 600px;
   margin: 30px auto;
-  background-color: #ffffff;
+  background-color: map.get(mapa.$colores, fondoform );
   padding: 20px 30px;
   border-radius: 10px;
   text-align: left;
-  color: #000;
+  color: map.get(mapa.$colores, textoform );
 
   label {
     display: block;
@@ -25,7 +26,7 @@ form {
   textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #0077c8;
+    border: 2px solid map.get(mapa.$colores, borde-inputform );
     border-radius: 5px;
     margin-bottom: 15px;
     font-size: 1rem;
@@ -33,7 +34,7 @@ form {
   }
 
   input[type="submit"] {
-    background-color: #0077c8;
+    background-color: map.get(mapa.$colores, botonform );
     color: white;
     border: none;
     padding: 12px 25px;
@@ -43,7 +44,7 @@ form {
     text-transform: uppercase;
 
     &:hover {
-      background-color: #005f9e;
+      background-color: map.get(mapa.$colores, boton-hoverform );
     }
   }
 }
