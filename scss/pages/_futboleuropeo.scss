@@ -1,60 +1,64 @@
-.contenedor {
-  display: grid;
-  grid-template-areas:
-    "noticia-principal noticia-principal sidebar"
-    "noticias-secundarias noticias-secundarias sidebar "
-    "footer footer footer";
-  grid-template-columns: 2fr 2fr 1fr;
-  gap: 20px;
-  padding: 20px;
-}
 
-.noticiaprincipalchampions {
-  grid-area: noticia-principal;
-  background: #002244;
-  padding: 20px;
-  border-radius: 10px;
-}
 
-.noticiassecundariaschampions {
-  grid-area: noticias-secundarias;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
+.futboleuropeo {
+  .contenedor {
+    display: grid;
+    grid-template-areas:
+      "noticia-principal noticia-principal sidebar"
+      "noticias-secundarias noticias-secundarias sidebar"
+      "footer footer footer";
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
 
-.noticiassecundariaschampions article {
-  background: #001a33;
-  padding: 15px;
-  border-radius: 10px;
-}
+  .noticiaprincipalchampions {
+    grid-area: noticia-principal;
+    background: #002244;
+    padding: 20px;
+    border-radius: 10px;
 
-.sidebarchampions {
-  grid-area: sidebar;
-  background: #001122;
-  padding: 20px;
-  border-radius: 10px;
-}
+    .championsleague {
+      border: 3px solid #f6f6f6;
+      display: block;
+      margin: 30px auto;
+      border-radius: 10px;
+      max-width: 70%;
+      height: auto;
+    }
+  }
 
-.sidebarchampions li {
-  color: #000407;
-  font-weight: bold;
-}
+  .noticiassecundariaschampions {
+    grid-area: noticias-secundarias;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 
-.championsleague {
-  border: 3px solid #f6f6f6;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 70%;
-  height: auto;
-}
+    article {
+      background: #001a33;
+      padding: 15px;
+      border-radius: 10px;
 
-.real, .lautaro, .city {
-  border: 3px solid #f6f6f6;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
+      img {
+        border: 3px solid #f6f6f6;
+        display: block;
+        margin: 30px auto;
+        border-radius: 10px;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .sidebarchampions {
+    grid-area: sidebar;
+    background: #001122;
+    padding: 20px;
+    border-radius: 10px;
+
+    li {
+      color: #000407;
+      font-weight: bold;
+    }
+  }
 }

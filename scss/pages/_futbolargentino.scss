@@ -1,52 +1,94 @@
-/* FUTBOL ARGENTINO */
+.futbolargentino {
+  .mainfutbolargentino {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "noticiafutbolargentinoprincipal tablazonab"
+      "resultadosycruces proximospartidos";
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.mainfutbolargentino {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas:
-    "noticiafutbolargentinoprincipal tablazonab"
-    "resultadosycruces proximospartidos";
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  /* === NOTICIA PRINCIPAL === */
+  .noticiafutbolargentinoprincipal {
+    grid-area: noticiafutbolargentinoprincipal;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 
-/* === ÁREAS === */
-.noticiafutbolargentinoprincipal {
-  grid-area: noticiafutbolargentinoprincipal;
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-}
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
 
-.tablazonab {
-  grid-area: tablazonab;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  /* === COLUMNA DERECHA === */
+  .tablazonab {
+    grid-area: tablazonab;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-.resultadosycruces {
-  grid-area: resultadosycruces;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+    .tabla {
+      table {
+        width: 100%;
+        border-collapse: collapse;
 
-.proximospartidos {
-  grid-area: proximospartidos;
-}
+        th, td {
+          padding: 8px;
+          text-align: center;
+        }
+      }
+    }
 
-.noticiafutbolargentinoprincipal img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+    .noticiafutbolargentinosecundaria {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
 
-.resultadosviernes li, .cruces li, .proximospartidos li {
-  color: black;
-  font-weight: bold;
+      img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  /* === ABAJO IZQUIERDA === */
+  .resultadosycruces {
+    grid-area: resultadosycruces;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .resultadosviernes,
+    .cruces {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+
+      ul li {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  /* === ABAJO DERECHA === */
+  .proximospartidos {
+    grid-area: proximospartidos;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+
+    ul li {
+      color: black;
+      font-weight: bold;
+    }
+  }
 }

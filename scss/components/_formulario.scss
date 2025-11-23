@@ -1,4 +1,8 @@
 /* FORMULARIO */
+
+
+
+
 form {
   width: 80%;
   max-width: 600px;
@@ -8,39 +12,38 @@ form {
   border-radius: 10px;
   text-align: left;
   color: #000;
-}
 
-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #0077c8;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  text-transform: none;
-}
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0077c8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-transform: none;
+  }
 
-form input[type="submit"] {
-  background-color: #0077c8;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
+  input[type="submit"] {
+    background-color: #0077c8;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
 
-form input[type="submit"]:hover {
-  background-color: #005f9e;
+    &:hover {
+      background-color: #005f9e;
+    }
+  }
 }
-

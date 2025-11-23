@@ -10,10 +10,12 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  /* ENCABEZADOS */
+  /* LISTAS, TABLAS Y SEPARADORES */
+  /* IMÁGENES */
+  /* ASIDE / SIDEBAR */
 }
-
-/* ======== ENCABEZADOS ======== */
-h1 {
+body h1 {
   text-align: center;
   color: #FFFFFF;
   text-shadow: 2px 2px 6px #0077C8;
@@ -24,8 +26,7 @@ h1 {
   background-color: #050003;
   padding: 10px;
 }
-
-h2 {
+body h2 {
   background-color: #000508;
   text-shadow: 2px 2px 6px #e9eced;
   color: rgb(255, 255, 255);
@@ -36,9 +37,7 @@ h2 {
   max-width: 700px;
   margin: 30px auto 15px;
 }
-
-/* LISTAS, TABLAS Y SEPARADORES */
-strong {
+body strong {
   display: block;
   text-align: center;
   margin: 25px auto;
@@ -46,8 +45,7 @@ strong {
   color: #ffffff;
   max-width: 900px;
 }
-
-p {
+body p {
   text-align: center;
   max-width: 900px;
   margin: 10px auto;
@@ -56,15 +54,13 @@ p {
   font-weight: bold;
   text-transform: none;
 }
-
-ul {
+body ul {
   list-style: none;
   padding: 0;
   max-width: 700px;
   margin: 0 auto;
 }
-
-ul li {
+body ul li {
   background-color: white;
   border-left: 5px solid #0077c8;
   margin: 8px 0;
@@ -72,8 +68,7 @@ ul li {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-
-table {
+body table {
   width: 90%;
   max-width: 900px;
   margin: 20px auto;
@@ -83,68 +78,56 @@ table {
   border-radius: 10px;
   overflow: hidden;
 }
-
-th {
+body table th {
   background-color: #0077c8;
   color: white;
   padding: 10px;
   text-transform: uppercase;
 }
-
-td {
+body table td {
   text-align: center;
   padding: 8px;
   border: 1px solid #ddd;
 }
-
-hr {
+body hr {
   width: 80%;
   max-width: 900px;
   border: none;
   border-top: 10px solid #000000;
   margin: 30px auto;
 }
-
-/* IMÁGENES */
-.nachorusso {
+body .nachorusso {
   border: 3px solid #f6f6f6;
   display: block;
   margin: 30px auto;
   border-radius: 10px;
   max-width: 550px;
 }
-
-/* ASIDE / SIDEBAR */
-aside {
+body aside {
   background: #000000;
   padding: 20px;
   border-radius: 12px;
   height: -moz-fit-content;
   height: fit-content;
 }
-
-aside h3 {
+body aside h3 {
   color: #00b4d8;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
-aside ul {
+body aside ul {
   list-style: none;
 }
-
-aside ul li {
+body aside ul li {
   padding: 8px 0;
   border-bottom: 1px solid #222;
   color: #050003;
 }
-
-aside ul li:last-child {
+body aside ul li:last-child {
   border-bottom: none;
 }
-
-aside ul li span {
+body aside ul li span {
   color: #000000;
   font-size: 0.9em;
 }
@@ -716,14 +699,12 @@ form {
   text-align: left;
   color: #000;
 }
-
 form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
   text-transform: uppercase;
 }
-
 form input[type=text],
 form input[type=email],
 form textarea {
@@ -735,7 +716,6 @@ form textarea {
   font-size: 1rem;
   text-transform: none;
 }
-
 form input[type=submit] {
   background-color: #0077c8;
   color: white;
@@ -746,7 +726,6 @@ form input[type=submit] {
   font-size: 1rem;
   text-transform: uppercase;
 }
-
 form input[type=submit]:hover {
   background-color: #005f9e;
 }
@@ -762,7 +741,6 @@ footer {
   font-size: 0.9rem;
   margin-top: 40px;
 }
-
 footer a {
   color: #0077c8;
   text-decoration: none;
@@ -772,42 +750,36 @@ footer a {
 /*  HEADER Y BARRA DE NAV */
 header {
   display: flex;
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  justify-content: space-between;
   align-items: center;
   background-color: #2b7219;
   padding: 10px 80px;
   border: 10px solid rgb(15, 14, 14);
+  /* SUBMENÚ  */
 }
-
-.imagenlogo {
+header .imagenlogo {
   width: 150px;
   height: auto;
 }
-
-.navbar ul {
+header .navbar ul {
   display: flex;
   list-style: none;
   gap: 7px;
   margin-right: 100px;
 }
-
-.navbar ul li a {
+header .navbar ul li a {
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-weight: 600;
   transition: color 0.3s ease;
 }
-
-.navbar ul li a:hover {
+header .navbar ul li a:hover {
   color: rgba(255, 8, 0, 0.9058823529);
 }
-
-/* SUBMENÚ  */
-.submenu {
+header .submenu {
   position: relative;
 }
-
-.submenu ul {
+header .submenu ul {
   display: none;
   position: absolute;
   top: 35px;
@@ -818,12 +790,10 @@ header {
   flex-direction: column;
   min-width: 160px;
 }
-
-.submenu ul li {
+header .submenu ul li {
   padding: 5px 0;
 }
-
-.submenu:hover ul {
+header .submenu:hover ul {
   display: flex;
 }
 
@@ -839,66 +809,55 @@ header {
   background-color: #001f0f;
   color: rgb(230, 229, 229);
 }
-
-.libertadoresnoticia1 {
+.mainlibertadores .libertadoresnoticia1 {
   grid-area: noticia-principal;
   background: #111;
   padding: 20px;
   border-radius: 10px;
 }
-
-.libertadoresnoticia1 img {
+.mainlibertadores .libertadoresnoticia1 img {
   width: 50%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-.partidoslibertadores {
+.mainlibertadores .partidoslibertadores {
   grid-area: partidos;
   background: #09022b;
   padding: 20px;
   border-radius: 10px;
 }
-
-.partido {
+.mainlibertadores .partidoslibertadores .partido {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #000000;
   padding: 8px 0;
 }
-
-.partido span {
+.mainlibertadores .partidoslibertadores .partido span {
   color: #ffffff;
   font-weight: bold;
 }
-
-.partido:last-child {
+.mainlibertadores .partidoslibertadores .partido:last-child {
   border-bottom: none;
 }
-
-.libertadoresnoticia2 {
+.mainlibertadores .libertadoresnoticia2 {
   grid-area: noticias;
   background: #111;
   padding: 20px;
   border-radius: 10px;
 }
-
-.libertadoresnoticia2 ul {
+.mainlibertadores .libertadoresnoticia2 ul {
   list-style: none;
   padding: 0;
 }
-
-.libertadoresnoticia2 li {
+.mainlibertadores .libertadoresnoticia2 li {
   padding: 8px 0;
   color: #000000;
   font-weight: bold;
 }
-
-.noticias li:last-child {
+.mainlibertadores .libertadoresnoticia2 li:last-child {
   border-bottom: none;
 }
-
-.tablalibertadores {
+.mainlibertadores .tablalibertadores {
   grid-area: tabla;
   background: #111;
   padding: 20px;
@@ -914,72 +873,101 @@ header {
   text-align: center;
 }
 
-/* MERCADO DE PASES */
-.mercado-pases {
+/* ==========================
+   MERCADO DE PASES (PÁGINA)
+========================== */
+.mercadodepases {
   padding: 40px;
   background: #4a9418;
 }
-
-.mercado-pases h2 {
+.mercadodepases h2 {
   text-align: center;
   font-size: 2rem;
   color: #faf8f8;
   margin-bottom: 30px;
 }
-
-.grid-pases {
+.mercadodepases .grid-pases {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
-
-.baltasar, .paredes, .thiago, .troilo, .mastan {
+.mercadodepases .grid-pases .baltasar,
+.mercadodepases .grid-pases .paredes,
+.mercadodepases .grid-pases .thiago,
+.mercadodepases .grid-pases .troilo,
+.mercadodepases .grid-pases .mastan {
   background: rgb(0, 0, 0);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-.baltasar img, .paredes img, .thiago img, .troilo img, .mastan img {
+.mercadodepases .grid-pases .baltasar img,
+.mercadodepases .grid-pases .paredes img,
+.mercadodepases .grid-pases .thiago img,
+.mercadodepases .grid-pases .troilo img,
+.mercadodepases .grid-pases .mastan img {
   width: 100%;
   height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.info {
+.mercadodepases .grid-pases .baltasar .info,
+.mercadodepases .grid-pases .paredes .info,
+.mercadodepases .grid-pases .thiago .info,
+.mercadodepases .grid-pases .troilo .info,
+.mercadodepases .grid-pases .mastan .info {
   padding: 15px;
 }
-
-.info h3 {
+.mercadodepases .grid-pases .baltasar .info h3,
+.mercadodepases .grid-pases .paredes .info h3,
+.mercadodepases .grid-pases .thiago .info h3,
+.mercadodepases .grid-pases .troilo .info h3,
+.mercadodepases .grid-pases .mastan .info h3 {
   font-size: 1.1rem;
   color: #0bec30;
   margin-bottom: 5px;
 }
-
-.info p {
+.mercadodepases .grid-pases .baltasar .info p,
+.mercadodepases .grid-pases .paredes .info p,
+.mercadodepases .grid-pases .thiago .info p,
+.mercadodepases .grid-pases .troilo .info p,
+.mercadodepases .grid-pases .mastan .info p {
   font-size: 1.1rem;
-  color: #d6d8e4;
+  color: #fffefe;
   margin-bottom: 5px;
 }
-
-.movimiento {
+.mercadodepases .grid-pases .baltasar .info .movimiento,
+.mercadodepases .grid-pases .paredes .info .movimiento,
+.mercadodepases .grid-pases .thiago .info .movimiento,
+.mercadodepases .grid-pases .troilo .info .movimiento,
+.mercadodepases .grid-pases .mastan .info .movimiento {
   font-weight: bold;
   margin-bottom: 8px;
 }
-
-.traspaso {
-  color: #2b7219;
+.mercadodepases .grid-pases .baltasar .info .traspaso,
+.mercadodepases .grid-pases .paredes .info .traspaso,
+.mercadodepases .grid-pases .thiago .info .traspaso,
+.mercadodepases .grid-pases .troilo .info .traspaso,
+.mercadodepases .grid-pases .mastan .info .traspaso {
+  color: #ffffff;
 }
-
-.detalle {
+.mercadodepases .grid-pases .baltasar .info .detalle,
+.mercadodepases .grid-pases .paredes .info .detalle,
+.mercadodepases .grid-pases .thiago .info .detalle,
+.mercadodepases .grid-pases .troilo .info .detalle,
+.mercadodepases .grid-pases .mastan .info .detalle {
   font-size: 0.9rem;
-  color: #555;
+  color: #ffffff;
 }
 
-/* FUTBOL ARGENTINO */
-.mainfutbolargentino {
+.futbolargentino {
+  /* === NOTICIA PRINCIPAL === */
+  /* === COLUMNA DERECHA === */
+  /* === ABAJO IZQUIERDA === */
+  /* === ABAJO DERECHA === */
+}
+.futbolargentino .mainfutbolargentino {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: "noticiafutbolargentinoprincipal tablazonab" "resultadosycruces proximospartidos";
@@ -988,9 +976,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* === ÁREAS === */
-.noticiafutbolargentinoprincipal {
+.futbolargentino .noticiafutbolargentinoprincipal {
   grid-area: noticiafutbolargentinoprincipal;
   background-color: #1a1a1a;
   color: #fff;
@@ -998,77 +984,77 @@ header {
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
-
-.tablazonab {
+.futbolargentino .noticiafutbolargentinoprincipal img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.futbolargentino .tablazonab {
   grid-area: tablazonab;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.resultadosycruces {
+.futbolargentino .tablazonab .tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.futbolargentino .tablazonab .tabla table th, .futbolargentino .tablazonab .tabla table td {
+  padding: 8px;
+  text-align: center;
+}
+.futbolargentino .tablazonab .noticiafutbolargentinosecundaria {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+}
+.futbolargentino .tablazonab .noticiafutbolargentinosecundaria img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.futbolargentino .resultadosycruces {
   grid-area: resultadosycruces;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.proximospartidos {
+.futbolargentino .resultadosycruces .resultadosviernes,
+.futbolargentino .resultadosycruces .cruces {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+}
+.futbolargentino .resultadosycruces .resultadosviernes ul li,
+.futbolargentino .resultadosycruces .cruces ul li {
+  color: black;
+  font-weight: bold;
+}
+.futbolargentino .proximospartidos {
   grid-area: proximospartidos;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
 }
-
-.noticiafutbolargentinoprincipal img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.resultadosviernes li, .cruces li, .proximospartidos li {
+.futbolargentino .proximospartidos ul li {
   color: black;
   font-weight: bold;
 }
 
-.contenedor {
+.futboleuropeo .contenedor {
   display: grid;
-  grid-template-areas: "noticia-principal noticia-principal sidebar" "noticias-secundarias noticias-secundarias sidebar " "footer footer footer";
+  grid-template-areas: "noticia-principal noticia-principal sidebar" "noticias-secundarias noticias-secundarias sidebar" "footer footer footer";
   grid-template-columns: 2fr 2fr 1fr;
   gap: 20px;
   padding: 20px;
 }
-
-.noticiaprincipalchampions {
+.futboleuropeo .noticiaprincipalchampions {
   grid-area: noticia-principal;
   background: #002244;
   padding: 20px;
   border-radius: 10px;
 }
-
-.noticiassecundariaschampions {
-  grid-area: noticias-secundarias;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.noticiassecundariaschampions article {
-  background: #001a33;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.sidebarchampions {
-  grid-area: sidebar;
-  background: #001122;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.sidebarchampions li {
-  color: #000407;
-  font-weight: bold;
-}
-
-.championsleague {
+.futboleuropeo .noticiaprincipalchampions .championsleague {
   border: 3px solid #f6f6f6;
   display: block;
   margin: 30px auto;
@@ -1076,14 +1062,34 @@ header {
   max-width: 70%;
   height: auto;
 }
-
-.real, .lautaro, .city {
+.futboleuropeo .noticiassecundariaschampions {
+  grid-area: noticias-secundarias;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.futboleuropeo .noticiassecundariaschampions article {
+  background: #001a33;
+  padding: 15px;
+  border-radius: 10px;
+}
+.futboleuropeo .noticiassecundariaschampions article img {
   border: 3px solid #f6f6f6;
   display: block;
   margin: 30px auto;
   border-radius: 10px;
   max-width: 100%;
   height: auto;
+}
+.futboleuropeo .sidebarchampions {
+  grid-area: sidebar;
+  background: #001122;
+  padding: 20px;
+  border-radius: 10px;
+}
+.futboleuropeo .sidebarchampions li {
+  color: #000407;
+  font-weight: bold;
 }
 
 .lavozdelhincha img.imagenprincipal {
@@ -1103,7 +1109,6 @@ header {
   gap: 20px;
   padding: 20px;
 }
-
 .noticias-grid article {
   background-color: rgb(19, 18, 18);
   border: 1px solid #ddd;
@@ -1111,19 +1116,16 @@ header {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .noticias-grid img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .noticias-grid h3 {
   margin: 10px;
   color: #007a33;
 }
-
 .noticias-grid p {
   margin: 10px;
 }/*# sourceMappingURL=style.css.map */
