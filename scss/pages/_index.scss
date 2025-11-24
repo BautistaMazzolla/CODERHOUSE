@@ -2,9 +2,7 @@
 @use "sass:map";
 @use "../utilities/maps" as mapa;
 
-/* ==========================
-   IMAGEN PRINCIPAL
-========================== */
+/* IMAGEN PRINCIPAL */
 .lavozdelhincha {
   img.imagenprincipal {
     width: 1000px;
@@ -14,16 +12,12 @@
     border-radius: 10px;
     max-width: 100%;
     height: auto;
-
-    /* ⭐ Fade-in suave */
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
   }
 }
 
-/* ==========================
-   GRID DE NOTICIAS INDEX
-========================== */
+/* GRID DE NOTICIAS INDEX */
 .noticias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -37,11 +31,9 @@
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-    /* ⭐ Aparición suave con slide-up */
     opacity: 0;
     animation: slideUp 0.6s ease forwards;
 
-    /* ⭐ Sombra suave en hover */
     transition: box-shadow 0.3s ease;
 
     &:hover {
@@ -54,7 +46,7 @@
     height: auto;
     object-fit: cover;
 
-    /* ⭐ Zoom leve en hover */
+    
     transition: transform 0.3s ease;
 
     &:hover {
@@ -72,17 +64,15 @@
   }
 }
 
-/* ==========================
-   KEYFRAMES
-========================== */
+/* KEYFRAMES */
 
-/* ⭐ Fade-in general */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* ⭐ Slide-up suave */
+
 @keyframes slideUp {
   from { 
     opacity: 0; 

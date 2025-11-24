@@ -1,11 +1,9 @@
-/* ==========================
-   MERCADO DE PASES (PÁGINA)
-========================== */
+/* MERCADO DE PASES (PÁGINA) */
 
 @use "sass:map";
 @use "../utilities/maps" as mapa;
 
-/* Animación de aparición */
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -46,10 +44,10 @@
       box-shadow: 0 4px 10px map.get(mapa.$colores, sombra-cardmdp );
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-      /* Animación al cargar */
+      
       animation: fadeInUp 0.6s ease both;
 
-      /* Animación al pasar el mouse */
+      
       &:hover {
         transform: scale(1.06);
         box-shadow: 0 8px 18px map.get(mapa.$colores, sombra-cardmdp );

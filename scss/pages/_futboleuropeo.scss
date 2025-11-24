@@ -14,14 +14,12 @@
     padding: 20px;
   }
 
-  /* ==========================
-     NOTICIA PRINCIPAL
-  =========================== */
+  /* NOTICIA PRINCIPAL */
   .noticiaprincipalchampions {
     grid-area: noticia-principal;
     @include mix.caja(map.get(mapa.$colores, fondo-principaleuropa));
 
-    /* Fade-in suave */
+    
     opacity: 0;
     animation: fadeIn 0.7s ease forwards;
 
@@ -33,7 +31,7 @@
       max-width: 70%;
       height: auto;
 
-      /* Zoom leve en hover */
+      
       transition: transform 0.3s ease;
 
       &:hover {
@@ -42,9 +40,7 @@
     }
   }
 
-  /* ==========================
-     NOTICIAS SECUNDARIAS
-  =========================== */
+  /* NOTICIAS SECUNDARIAS */
   .noticiassecundariaschampions {
     grid-area: noticias-secundarias;
     display: grid;
@@ -54,12 +50,12 @@
     article {
       @include mix.caja(map.get(mapa.$colores, fondo-secundarioeuropa), 15px);
 
-      /* Slide-up suave */
+      
       opacity: 0;
       transform: translateY(10px);
       animation: slideUp 0.6s ease forwards;
 
-      /* Hover con sombra */
+      
       transition: box-shadow 0.3s ease;
 
       &:hover {
@@ -74,7 +70,7 @@
         max-width: 100%;
         height: auto;
 
-        /* Zoom leve */
+       
         transition: transform 0.3s ease;
 
         &:hover {
@@ -84,14 +80,12 @@
     }
   }
 
-  /* ==========================
-     SIDEBAR
-  =========================== */
+  /* SIDEBAR */
   .sidebarchampions {
     grid-area: sidebar;
     @include mix.caja(map.get(mapa.$colores, fondo-sidebareuropa));
 
-    /* Fade-in + pequeño slide */
+    
     opacity: 0;
     transform: translateX(10px);
     animation: slideIn 0.7s ease forwards;
@@ -103,9 +97,7 @@
   }
 }
 
-/* ==========================
-   KEYFRAMES
-========================== */
+/* KEYFRAMES */
 
 @keyframes fadeIn {
   from { opacity: 0; }

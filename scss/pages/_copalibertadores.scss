@@ -2,11 +2,9 @@
 @use "sass:map";
 @use "../utilities/maps" as mapa;
 
-/* ===========================
-   ANIMACIONES COPA LIBERTADORES
-============================= */
+/* ANIMACIONES */
 
-/* Brillo dorado */
+
 @keyframes shineLibertadores {
   0% {
     box-shadow: 0 0 0px #d4af37;
@@ -16,7 +14,7 @@
   }
 }
 
-/* Entrada desde los lados */
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -40,9 +38,7 @@
 }
 
 
-/* ===========================
-   ESTILOS PRINCIPALES
-============================= */
+/* ESTILOS PRINCIPALES */
 
 .mainlibertadores {
   display: grid;
@@ -55,7 +51,7 @@
   background-color: #001f0f;
   color: map.get(mapa.$colores, texto-principallib );
 
-  /* Animación general */
+  
   animation: slideInLeft 0.6s ease both;
 
   .libertadoresnoticia1 {
@@ -64,7 +60,7 @@
     padding: 20px;
     border-radius: 10px;
 
-    /* Efecto brillo */
+    
     animation: shineLibertadores 1.5s ease-in-out alternate infinite;
 
     img {
@@ -80,7 +76,7 @@
     padding: 20px;
     border-radius: 10px;
 
-    /* Entrada estilo marcador */
+    
     animation: slideInRight 0.6s ease both;
 
     .partido {
@@ -98,7 +94,7 @@
         border-bottom: none;
       }
 
-      /* Hover tipo "noche de copa" */
+      
       &:hover {
         color: #d4af37;
         transform: scale(1.03);

@@ -743,52 +743,20 @@ form input[type=submit]:hover {
    LAYOUTS
 ========================== */
 /* FOOTER */
-/* FOOTER */
-/* Animación de entrada */
-@keyframes fadeInFooter {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 footer {
   background-color: #000000;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9rem;
   margin-top: 40px;
-  animation: fadeInFooter 0.6s ease-out both;
 }
 footer a {
   color: #0077c8;
   text-decoration: none;
   margin: 0 5px;
-  /* 👇 Necesario para que se vea la línea */
-  display: inline-block;
-  position: relative;
-  padding-bottom: 3px;
-  transition: color 0.3s ease;
-}
-footer a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #0077c8;
-  transition: width 0.3s ease;
-}
-footer a:hover::after {
-  width: 100%;
 }
 
 /*  HEADER Y BARRA DE NAV */
-/* Animación entrada suave */
 @keyframes fadeInHeader {
   from {
     opacity: 0;
@@ -799,7 +767,6 @@ footer a:hover::after {
     transform: translateY(0);
   }
 }
-/* Animación para submenú */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -810,7 +777,6 @@ footer a:hover::after {
     transform: translateY(0);
   }
 }
-/* Hover suave */
 @keyframes linkHover {
   from {
     letter-spacing: 0px;
@@ -826,7 +792,6 @@ header {
   background-color: #e62847;
   padding: 10px 80px;
   border: 10px solid rgb(15, 14, 14);
-  /* Animación de entrada del header */
   animation: fadeInHeader 0.6s ease-out both;
   /* SUBMENÚ */
 }
@@ -834,7 +799,6 @@ header .imagenlogo {
   width: 150px;
   height: auto;
   transition: transform 0.25s ease;
-  /* Efecto elegante */
 }
 header .imagenlogo:hover {
   transform: scale(1.05);
@@ -858,7 +822,6 @@ header .navbar ul li a:hover {
 }
 header .submenu {
   position: relative;
-  /* Efecto slide-down suave */
 }
 header .submenu ul {
   display: none;
@@ -888,10 +851,7 @@ header .submenu:hover ul {
 /* ==========================
    PAGES
 ========================== */
-/* ===========================
-   ANIMACIONES COPA LIBERTADORES
-============================= */
-/* Brillo dorado */
+/* ANIMACIONES */
 @keyframes shineLibertadores {
   0% {
     box-shadow: 0 0 0px #d4af37;
@@ -900,7 +860,6 @@ header .submenu:hover ul {
     box-shadow: 0 0 15px #d4af37;
   }
 }
-/* Entrada desde los lados */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -921,9 +880,7 @@ header .submenu:hover ul {
     transform: translateX(0);
   }
 }
-/* ===========================
-   ESTILOS PRINCIPALES
-============================= */
+/* ESTILOS PRINCIPALES */
 .mainlibertadores {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -932,7 +889,6 @@ header .submenu:hover ul {
   padding: 20px;
   background-color: #001f0f;
   color: rgb(230, 229, 229);
-  /* Animación general */
   animation: slideInLeft 0.6s ease both;
 }
 .mainlibertadores .libertadoresnoticia1 {
@@ -940,7 +896,6 @@ header .submenu:hover ul {
   background: #111;
   padding: 20px;
   border-radius: 10px;
-  /* Efecto brillo */
   animation: shineLibertadores 1.5s ease-in-out alternate infinite;
 }
 .mainlibertadores .libertadoresnoticia1 img {
@@ -953,7 +908,6 @@ header .submenu:hover ul {
   background: #09022b;
   padding: 20px;
   border-radius: 10px;
-  /* Entrada estilo marcador */
   animation: slideInRight 0.6s ease both;
 }
 .mainlibertadores .partidoslibertadores .partido {
@@ -961,7 +915,6 @@ header .submenu:hover ul {
   justify-content: space-between;
   border-bottom: 1px solid #000000;
   padding: 8px 0;
-  /* Hover tipo "noche de copa" */
 }
 .mainlibertadores .partidoslibertadores .partido span {
   color: #ffffff;
@@ -1019,10 +972,7 @@ header .submenu:hover ul {
   text-align: center;
 }
 
-/* ==========================
-   MERCADO DE PASES (PÁGINA)
-========================== */
-/* Animación de aparición */
+/* MERCADO DE PASES (PÁGINA) */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -1059,9 +1009,7 @@ header .submenu:hover ul {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Animación al cargar */
   animation: fadeInUp 0.6s ease both;
-  /* Animación al pasar el mouse */
 }
 .mercadodepases .grid-pases .baltasar:hover,
 .mercadodepases .grid-pases .paredes:hover,
@@ -1135,18 +1083,10 @@ header .submenu:hover ul {
    UTILITIES 
 ========================== */
 .futbolargentino {
-  /* ==========================
-     NOTICIA PRINCIPAL
-  ========================== */
-  /* ==========================
-     COLUMNA DERECHA
-  ========================== */
-  /* ==========================
-     RESULTADOS Y CRUCES
-  ========================== */
-  /* ==========================
-     PRÓXIMOS PARTIDOS
-  ========================== */
+  /* NOTICIA PRINCIPAL */
+  /* COLUMNA DERECHA */
+  /* RESULTADOS Y CRUCES */
+  /* PRÓXIMOS PARTIDOS */
 }
 .futbolargentino .mainfutbolargentino {
   display: grid;
@@ -1163,7 +1103,6 @@ header .submenu:hover ul {
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  /* Animación sutil */
   opacity: 0;
   animation: fadeIn 0.7s ease forwards;
 }
@@ -1235,9 +1174,7 @@ header .submenu:hover ul {
   font-weight: bold;
 }
 
-/* ==========================
-   ANIMACIONES
-========================== */
+/* ANIMACIONES */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1249,15 +1186,9 @@ header .submenu:hover ul {
   }
 }
 .futboleuropeo {
-  /* ==========================
-     NOTICIA PRINCIPAL
-  =========================== */
-  /* ==========================
-     NOTICIAS SECUNDARIAS
-  =========================== */
-  /* ==========================
-     SIDEBAR
-  =========================== */
+  /* NOTICIA PRINCIPAL */
+  /* NOTICIAS SECUNDARIAS */
+  /* SIDEBAR */
 }
 .futboleuropeo .contenedor {
   display: grid;
@@ -1271,7 +1202,6 @@ header .submenu:hover ul {
   background: #002244;
   padding: 20px;
   border-radius: 10px;
-  /* Fade-in suave */
   opacity: 0;
   animation: fadeIn 0.7s ease forwards;
 }
@@ -1282,7 +1212,6 @@ header .submenu:hover ul {
   border-radius: 10px;
   max-width: 70%;
   height: auto;
-  /* Zoom leve en hover */
   transition: transform 0.3s ease;
 }
 .futboleuropeo .noticiaprincipalchampions .championsleague:hover {
@@ -1298,11 +1227,9 @@ header .submenu:hover ul {
   background: #001a33;
   padding: 15px;
   border-radius: 10px;
-  /* Slide-up suave */
   opacity: 0;
   transform: translateY(10px);
   animation: slideUp 0.6s ease forwards;
-  /* Hover con sombra */
   transition: box-shadow 0.3s ease;
 }
 .futboleuropeo .noticiassecundariaschampions article:hover {
@@ -1315,7 +1242,6 @@ header .submenu:hover ul {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
-  /* Zoom leve */
   transition: transform 0.3s ease;
 }
 .futboleuropeo .noticiassecundariaschampions article img:hover {
@@ -1326,7 +1252,6 @@ header .submenu:hover ul {
   background: #001122;
   padding: 20px;
   border-radius: 10px;
-  /* Fade-in + pequeño slide */
   opacity: 0;
   transform: translateX(10px);
   animation: slideIn 0.7s ease forwards;
@@ -1336,9 +1261,7 @@ header .submenu:hover ul {
   font-weight: bold;
 }
 
-/* ==========================
-   KEYFRAMES
-========================== */
+/* KEYFRAMES */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1367,9 +1290,7 @@ header .submenu:hover ul {
     transform: translateX(0);
   }
 }
-/* ==========================
-   IMAGEN PRINCIPAL
-========================== */
+/* IMAGEN PRINCIPAL */
 .lavozdelhincha img.imagenprincipal {
   width: 1000px;
   border: 3px solid #4402c9;
@@ -1378,14 +1299,11 @@ header .submenu:hover ul {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
-  /* ⭐ Fade-in suave */
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
 }
 
-/* ==========================
-   GRID DE NOTICIAS INDEX
-========================== */
+/* GRID DE NOTICIAS INDEX */
 .noticias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1398,10 +1316,8 @@ header .submenu:hover ul {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* ⭐ Aparición suave con slide-up */
   opacity: 0;
   animation: slideUp 0.6s ease forwards;
-  /* ⭐ Sombra suave en hover */
   transition: box-shadow 0.3s ease;
 }
 .noticias-grid article:hover {
@@ -1412,7 +1328,6 @@ header .submenu:hover ul {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  /* ⭐ Zoom leve en hover */
   transition: transform 0.3s ease;
 }
 .noticias-grid img:hover {
@@ -1426,10 +1341,7 @@ header .submenu:hover ul {
   margin: 10px;
 }
 
-/* ==========================
-   KEYFRAMES
-========================== */
-/* ⭐ Fade-in general */
+/* KEYFRAMES */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1438,7 +1350,6 @@ header .submenu:hover ul {
     opacity: 1;
   }
 }
-/* ⭐ Slide-up suave */
 @keyframes slideUp {
   from {
     opacity: 0;
