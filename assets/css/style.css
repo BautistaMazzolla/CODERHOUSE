@@ -1082,12 +1082,7 @@ header .submenu:hover ul {
 /* ==========================
    UTILITIES 
 ========================== */
-.futbolargentino {
-  /* NOTICIA PRINCIPAL */
-  /* COLUMNA DERECHA */
-  /* RESULTADOS Y CRUCES */
-  /* PRÓXIMOS PARTIDOS */
-}
+
 .futbolargentino .mainfutbolargentino {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -1185,11 +1180,7 @@ header .submenu:hover ul {
     transform: translateY(0);
   }
 }
-.futboleuropeo {
-  /* NOTICIA PRINCIPAL */
-  /* NOTICIAS SECUNDARIAS */
-  /* SIDEBAR */
-}
+
 .futboleuropeo .contenedor {
   display: grid;
   grid-template-areas: "noticia-principal noticia-principal sidebar" "noticias-secundarias noticias-secundarias sidebar" "footer footer footer";
