@@ -141,6 +141,675 @@ body aside ul li span {
   font-size: 0.9em;
 }
 
+/* ==========================
+   COMPONENTS
+========================== */
+/* FORMULARIO */
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: left;
+  color: #000000;
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #0077c8;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-transform: none;
+}
+form input[type=submit] {
+  background-color: #0077c8;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+form input[type=submit]:hover {
+  background-color: #005f9e;
+}
+
+/* ==========================
+   LAYOUTS
+========================== */
+/* FOOTER */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+footer a {
+  color: #0077c8;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/*  HEADER Y BARRA DE NAV */
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes linkHover {
+  from {
+    letter-spacing: 0px;
+  }
+  to {
+    letter-spacing: 1px;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e62847;
+  padding: 10px 80px;
+  border: 10px solid rgb(15, 14, 14);
+  animation: fadeInHeader 0.6s ease-out both;
+  /* SUBMENÚ */
+}
+header .imagenlogo {
+  width: 150px;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+header .imagenlogo:hover {
+  transform: scale(1.05);
+}
+header .navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 7px;
+  margin-right: 100px;
+}
+header .navbar ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.25s ease;
+}
+header .navbar ul li a:hover {
+  color: rgba(255, 8, 0, 0.9058823529);
+  transform: translateY(-2px);
+  animation: linkHover 0.3s ease forwards;
+}
+header .submenu {
+  position: relative;
+}
+header .submenu ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #2c1147;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 160px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-5px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+header .submenu ul li {
+  padding: 5px 0;
+}
+header .submenu:hover ul {
+  display: flex;
+  animation: slideDown 0.25s ease forwards;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================
+   PAGES
+========================== */
+/* ANIMACIONES */
+@keyframes shineLibertadores {
+  0% {
+    box-shadow: 0 0 0px #d4af37;
+  }
+  100% {
+    box-shadow: 0 0 15px #d4af37;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ESTILOS PRINCIPALES */
+.mainlibertadores {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "noticia-principal partidos" "noticias tabla";
+  gap: 20px;
+  padding: 20px;
+  background-color: #001f0f;
+  color: rgb(230, 229, 229);
+  animation: slideInLeft 0.6s ease both;
+}
+.mainlibertadores .libertadoresnoticia1 {
+  grid-area: noticia-principal;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  animation: shineLibertadores 1.5s ease-in-out alternate infinite;
+}
+.mainlibertadores .libertadoresnoticia1 img {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.mainlibertadores .partidoslibertadores {
+  grid-area: partidos;
+  background: #09022b;
+  padding: 20px;
+  border-radius: 10px;
+  animation: slideInRight 0.6s ease both;
+}
+.mainlibertadores .partidoslibertadores .partido {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+}
+.mainlibertadores .partidoslibertadores .partido span {
+  color: #ffffff;
+  font-weight: bold;
+}
+.mainlibertadores .partidoslibertadores .partido:last-child {
+  border-bottom: none;
+}
+.mainlibertadores .partidoslibertadores .partido:hover {
+  color: #d4af37;
+  transform: scale(1.03);
+  transition: 0.2s ease;
+}
+.mainlibertadores .libertadoresnoticia2 {
+  grid-area: noticias;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  animation: slideInLeft 0.6s ease both;
+}
+.mainlibertadores .libertadoresnoticia2 ul {
+  list-style: none;
+  padding: 0;
+}
+.mainlibertadores .libertadoresnoticia2 li {
+  padding: 8px 0;
+  color: #000000;
+  font-weight: bold;
+}
+.mainlibertadores .libertadoresnoticia2 li:hover {
+  color: #d4af37;
+  transition: 0.2s ease;
+  transform: translateX(5px);
+}
+.mainlibertadores .libertadoresnoticia2 li:last-child {
+  border-bottom: none;
+}
+.mainlibertadores .tablalibertadores {
+  grid-area: tabla;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: slideInRight 0.6s ease both;
+}
+.mainlibertadores .tablalibertadores:hover {
+  animation: shineLibertadores 1.5s ease-in-out alternate infinite;
+}
+
+.sudamericana {
+  background: linear-gradient(180deg, #001a33 0%, #003366 70%, #004c99 100%);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* MERCADO DE PASES (PÁGINA) */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mercadodepases {
+  padding: 40px;
+  background: #4a9418;
+}
+.mercadodepases h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #faf8f8;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease both;
+}
+.mercadodepases .grid-pases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.mercadodepases .grid-pases .baltasar,
+.mercadodepases .grid-pases .paredes,
+.mercadodepases .grid-pases .thiago,
+.mercadodepases .grid-pases .troilo,
+.mercadodepases .grid-pases .mastan {
+  background: #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease both;
+}
+.mercadodepases .grid-pases .baltasar:hover,
+.mercadodepases .grid-pases .paredes:hover,
+.mercadodepases .grid-pases .thiago:hover,
+.mercadodepases .grid-pases .troilo:hover,
+.mercadodepases .grid-pases .mastan:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.mercadodepases .grid-pases .baltasar img,
+.mercadodepases .grid-pases .paredes img,
+.mercadodepases .grid-pases .thiago img,
+.mercadodepases .grid-pases .troilo img,
+.mercadodepases .grid-pases .mastan img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mercadodepases .grid-pases .baltasar .info,
+.mercadodepases .grid-pases .paredes .info,
+.mercadodepases .grid-pases .thiago .info,
+.mercadodepases .grid-pases .troilo .info,
+.mercadodepases .grid-pases .mastan .info {
+  padding: 15px;
+}
+.mercadodepases .grid-pases .baltasar .info h3,
+.mercadodepases .grid-pases .paredes .info h3,
+.mercadodepases .grid-pases .thiago .info h3,
+.mercadodepases .grid-pases .troilo .info h3,
+.mercadodepases .grid-pases .mastan .info h3 {
+  font-size: 1.1rem;
+  color: #0bec30;
+  margin-bottom: 5px;
+}
+.mercadodepases .grid-pases .baltasar .info p,
+.mercadodepases .grid-pases .paredes .info p,
+.mercadodepases .grid-pases .thiago .info p,
+.mercadodepases .grid-pases .troilo .info p,
+.mercadodepases .grid-pases .mastan .info p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.mercadodepases .grid-pases .baltasar .info .movimiento,
+.mercadodepases .grid-pases .paredes .info .movimiento,
+.mercadodepases .grid-pases .thiago .info .movimiento,
+.mercadodepases .grid-pases .troilo .info .movimiento,
+.mercadodepases .grid-pases .mastan .info .movimiento {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.mercadodepases .grid-pases .baltasar .info .traspaso,
+.mercadodepases .grid-pases .paredes .info .traspaso,
+.mercadodepases .grid-pases .thiago .info .traspaso,
+.mercadodepases .grid-pases .troilo .info .traspaso,
+.mercadodepases .grid-pases .mastan .info .traspaso {
+  color: #ffffff;
+}
+.mercadodepases .grid-pases .baltasar .info .detalle,
+.mercadodepases .grid-pases .paredes .info .detalle,
+.mercadodepases .grid-pases .thiago .info .detalle,
+.mercadodepases .grid-pases .troilo .info .detalle,
+.mercadodepases .grid-pases .mastan .info .detalle {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* ==========================
+   UTILITIES 
+========================== */
+.futbolargentino {
+  /* NOTICIA PRINCIPAL */
+  /* COLUMNA DERECHA */
+  /* RESULTADOS Y CRUCES */
+  /* PRÓXIMOS PARTIDOS */
+}
+.futbolargentino .mainfutbolargentino {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "noticiafutbolargentinoprincipal tablazonab" "resultadosycruces proximospartidos";
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.futbolargentino .noticiafutbolargentinoprincipal {
+  grid-area: noticiafutbolargentinoprincipal;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  animation: fadeIn 0.7s ease forwards;
+}
+.futbolargentino .noticiafutbolargentinoprincipal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.futbolargentino .noticiafutbolargentinoprincipal img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.futbolargentino .tablazonab {
+  grid-area: tablazonab;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.futbolargentino .tablazonab .tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.futbolargentino .tablazonab .tabla table th, .futbolargentino .tablazonab .tabla table td {
+  padding: 8px;
+  text-align: center;
+}
+.futbolargentino .tablazonab .noticiafutbolargentinosecundaria {
+  background: #111;
+  transition: transform 0.25s ease;
+}
+.futbolargentino .tablazonab .noticiafutbolargentinosecundaria:hover {
+  transform: translateY(-3px);
+}
+.futbolargentino .tablazonab .noticiafutbolargentinosecundaria img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.futbolargentino .resultadosycruces {
+  grid-area: resultadosycruces;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.futbolargentino .resultadosycruces .resultadosviernes,
+.futbolargentino .resultadosycruces .cruces {
+  background: #1a1a1a;
+  transition: box-shadow 0.25s ease;
+}
+.futbolargentino .resultadosycruces .resultadosviernes:hover,
+.futbolargentino .resultadosycruces .cruces:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.futbolargentino .resultadosycruces .resultadosviernes ul li,
+.futbolargentino .resultadosycruces .cruces ul li {
+  color: #000;
+  font-weight: bold;
+}
+.futbolargentino .proximospartidos {
+  grid-area: proximospartidos;
+  background: #1a1a1a;
+  transition: box-shadow 0.25s ease;
+}
+.futbolargentino .proximospartidos:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.futbolargentino .proximospartidos ul li {
+  color: #000;
+  font-weight: bold;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.futboleuropeo {
+  /* NOTICIA PRINCIPAL */
+  /* NOTICIAS SECUNDARIAS */
+  /* SIDEBAR */
+}
+.futboleuropeo .contenedor {
+  display: grid;
+  grid-template-areas: "noticia-principal noticia-principal sidebar" "noticias-secundarias noticias-secundarias sidebar" "footer footer footer";
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.futboleuropeo .noticiaprincipalchampions {
+  grid-area: noticia-principal;
+  background: #002244;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 0.7s ease forwards;
+}
+.futboleuropeo .noticiaprincipalchampions .championsleague {
+  border: 3px solid #7f17b7;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 70%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.futboleuropeo .noticiaprincipalchampions .championsleague:hover {
+  transform: scale(1.03);
+}
+.futboleuropeo .noticiassecundariaschampions {
+  grid-area: noticias-secundarias;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.futboleuropeo .noticiassecundariaschampions article {
+  background: #001a33;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.6s ease forwards;
+  transition: box-shadow 0.3s ease;
+}
+.futboleuropeo .noticiassecundariaschampions article:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.futboleuropeo .noticiassecundariaschampions article img {
+  border: 3px solid #7f17b7;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.futboleuropeo .noticiassecundariaschampions article img:hover {
+  transform: scale(1.04);
+}
+.futboleuropeo .sidebarchampions {
+  grid-area: sidebar;
+  background: #001122;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(10px);
+  animation: slideIn 0.7s ease forwards;
+}
+.futboleuropeo .sidebarchampions li {
+  color: #000407;
+  font-weight: bold;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* IMAGEN PRINCIPAL */
+.lavozdelhincha img.imagenprincipal {
+  width: 1000px;
+  border: 3px solid #4402c9;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* GRID DE NOTICIAS INDEX */
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.noticias-grid article {
+  background-color: rgb(19, 18, 18);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+  transition: box-shadow 0.3s ease;
+}
+.noticias-grid article:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.noticias-grid img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.noticias-grid img:hover {
+  transform: scale(1.03);
+}
+.noticias-grid h3 {
+  margin: 10px;
+  color: #007a33;
+}
+.noticias-grid p {
+  margin: 10px;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==========================
+   QUERIES
+========================== */
 /* MEDIA QUERY */
 /* Ocultar el checkbox */
 #menu-toggle {
@@ -692,662 +1361,5 @@ body aside ul li span {
   }
   input, textarea {
     font-size: 1rem;
-  }
-}
-/* ==========================
-   COMPONENTS
-========================== */
-/* FORMULARIO */
-form {
-  width: 80%;
-  max-width: 600px;
-  margin: 30px auto;
-  background-color: #ffffff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  text-align: left;
-  color: #000000;
-}
-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-form input[type=text],
-form input[type=email],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #0077c8;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  text-transform: none;
-}
-form input[type=submit] {
-  background-color: #0077c8;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-form input[type=submit]:hover {
-  background-color: #005f9e;
-}
-
-/* ==========================
-   LAYOUTS
-========================== */
-/* FOOTER */
-footer {
-  background-color: #000000;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-footer a {
-  color: #0077c8;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-/*  HEADER Y BARRA DE NAV */
-@keyframes fadeInHeader {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes linkHover {
-  from {
-    letter-spacing: 0px;
-  }
-  to {
-    letter-spacing: 1px;
-  }
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e62847;
-  padding: 10px 80px;
-  border: 10px solid rgb(15, 14, 14);
-  animation: fadeInHeader 0.6s ease-out both;
-  /* SUBMENÚ */
-}
-header .imagenlogo {
-  width: 150px;
-  height: auto;
-  transition: transform 0.25s ease;
-}
-header .imagenlogo:hover {
-  transform: scale(1.05);
-}
-header .navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 7px;
-  margin-right: 100px;
-}
-header .navbar ul li a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.25s ease;
-}
-header .navbar ul li a:hover {
-  color: rgba(255, 8, 0, 0.9058823529);
-  transform: translateY(-2px);
-  animation: linkHover 0.3s ease forwards;
-}
-header .submenu {
-  position: relative;
-}
-header .submenu ul {
-  display: none;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  background: #2c1147;
-  padding: 10px;
-  border-radius: 5px;
-  flex-direction: column;
-  min-width: 160px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-5px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-header .submenu ul li {
-  padding: 5px 0;
-}
-header .submenu:hover ul {
-  display: flex;
-  animation: slideDown 0.25s ease forwards;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* ==========================
-   PAGES
-========================== */
-/* ANIMACIONES */
-@keyframes shineLibertadores {
-  0% {
-    box-shadow: 0 0 0px #d4af37;
-  }
-  100% {
-    box-shadow: 0 0 15px #d4af37;
-  }
-}
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-/* ESTILOS PRINCIPALES */
-.mainlibertadores {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: "noticia-principal partidos" "noticias tabla";
-  gap: 20px;
-  padding: 20px;
-  background-color: #001f0f;
-  color: rgb(230, 229, 229);
-  animation: slideInLeft 0.6s ease both;
-}
-.mainlibertadores .libertadoresnoticia1 {
-  grid-area: noticia-principal;
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  animation: shineLibertadores 1.5s ease-in-out alternate infinite;
-}
-.mainlibertadores .libertadoresnoticia1 img {
-  width: 50%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-.mainlibertadores .partidoslibertadores {
-  grid-area: partidos;
-  background: #09022b;
-  padding: 20px;
-  border-radius: 10px;
-  animation: slideInRight 0.6s ease both;
-}
-.mainlibertadores .partidoslibertadores .partido {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #000000;
-  padding: 8px 0;
-}
-.mainlibertadores .partidoslibertadores .partido span {
-  color: #ffffff;
-  font-weight: bold;
-}
-.mainlibertadores .partidoslibertadores .partido:last-child {
-  border-bottom: none;
-}
-.mainlibertadores .partidoslibertadores .partido:hover {
-  color: #d4af37;
-  transform: scale(1.03);
-  transition: 0.2s ease;
-}
-.mainlibertadores .libertadoresnoticia2 {
-  grid-area: noticias;
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  animation: slideInLeft 0.6s ease both;
-}
-.mainlibertadores .libertadoresnoticia2 ul {
-  list-style: none;
-  padding: 0;
-}
-.mainlibertadores .libertadoresnoticia2 li {
-  padding: 8px 0;
-  color: #000000;
-  font-weight: bold;
-}
-.mainlibertadores .libertadoresnoticia2 li:hover {
-  color: #d4af37;
-  transition: 0.2s ease;
-  transform: translateX(5px);
-}
-.mainlibertadores .libertadoresnoticia2 li:last-child {
-  border-bottom: none;
-}
-.mainlibertadores .tablalibertadores {
-  grid-area: tabla;
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  animation: slideInRight 0.6s ease both;
-}
-.mainlibertadores .tablalibertadores:hover {
-  animation: shineLibertadores 1.5s ease-in-out alternate infinite;
-}
-
-.sudamericana {
-  background: linear-gradient(180deg, #001a33 0%, #003366 70%, #004c99 100%);
-  color: #e0e0e0;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* MERCADO DE PASES (PÁGINA) */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.mercadodepases {
-  padding: 40px;
-  background: #4a9418;
-}
-.mercadodepases h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #faf8f8;
-  margin-bottom: 30px;
-  animation: fadeInUp 0.6s ease both;
-}
-.mercadodepases .grid-pases {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-.mercadodepases .grid-pases .baltasar,
-.mercadodepases .grid-pases .paredes,
-.mercadodepases .grid-pases .thiago,
-.mercadodepases .grid-pases .troilo,
-.mercadodepases .grid-pases .mastan {
-  background: #000000;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.6s ease both;
-}
-.mercadodepases .grid-pases .baltasar:hover,
-.mercadodepases .grid-pases .paredes:hover,
-.mercadodepases .grid-pases .thiago:hover,
-.mercadodepases .grid-pases .troilo:hover,
-.mercadodepases .grid-pases .mastan:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-.mercadodepases .grid-pases .baltasar img,
-.mercadodepases .grid-pases .paredes img,
-.mercadodepases .grid-pases .thiago img,
-.mercadodepases .grid-pases .troilo img,
-.mercadodepases .grid-pases .mastan img {
-  width: 100%;
-  height: 220px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mercadodepases .grid-pases .baltasar .info,
-.mercadodepases .grid-pases .paredes .info,
-.mercadodepases .grid-pases .thiago .info,
-.mercadodepases .grid-pases .troilo .info,
-.mercadodepases .grid-pases .mastan .info {
-  padding: 15px;
-}
-.mercadodepases .grid-pases .baltasar .info h3,
-.mercadodepases .grid-pases .paredes .info h3,
-.mercadodepases .grid-pases .thiago .info h3,
-.mercadodepases .grid-pases .troilo .info h3,
-.mercadodepases .grid-pases .mastan .info h3 {
-  font-size: 1.1rem;
-  color: #0bec30;
-  margin-bottom: 5px;
-}
-.mercadodepases .grid-pases .baltasar .info p,
-.mercadodepases .grid-pases .paredes .info p,
-.mercadodepases .grid-pases .thiago .info p,
-.mercadodepases .grid-pases .troilo .info p,
-.mercadodepases .grid-pases .mastan .info p {
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-bottom: 5px;
-}
-.mercadodepases .grid-pases .baltasar .info .movimiento,
-.mercadodepases .grid-pases .paredes .info .movimiento,
-.mercadodepases .grid-pases .thiago .info .movimiento,
-.mercadodepases .grid-pases .troilo .info .movimiento,
-.mercadodepases .grid-pases .mastan .info .movimiento {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.mercadodepases .grid-pases .baltasar .info .traspaso,
-.mercadodepases .grid-pases .paredes .info .traspaso,
-.mercadodepases .grid-pases .thiago .info .traspaso,
-.mercadodepases .grid-pases .troilo .info .traspaso,
-.mercadodepases .grid-pases .mastan .info .traspaso {
-  color: #ffffff;
-}
-.mercadodepases .grid-pases .baltasar .info .detalle,
-.mercadodepases .grid-pases .paredes .info .detalle,
-.mercadodepases .grid-pases .thiago .info .detalle,
-.mercadodepases .grid-pases .troilo .info .detalle,
-.mercadodepases .grid-pases .mastan .info .detalle {
-  font-size: 0.9rem;
-  color: #ffffff;
-}
-
-/* ==========================
-   UTILITIES 
-========================== */
-
-.futbolargentino .mainfutbolargentino {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: "noticiafutbolargentinoprincipal tablazonab" "resultadosycruces proximospartidos";
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.futbolargentino .noticiafutbolargentinoprincipal {
-  grid-area: noticiafutbolargentinoprincipal;
-  background-color: #1a1a1a;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  opacity: 0;
-  animation: fadeIn 0.7s ease forwards;
-}
-.futbolargentino .noticiafutbolargentinoprincipal:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-.futbolargentino .noticiafutbolargentinoprincipal img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.futbolargentino .tablazonab {
-  grid-area: tablazonab;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.futbolargentino .tablazonab .tabla table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.futbolargentino .tablazonab .tabla table th, .futbolargentino .tablazonab .tabla table td {
-  padding: 8px;
-  text-align: center;
-}
-.futbolargentino .tablazonab .noticiafutbolargentinosecundaria {
-  background: #111;
-  transition: transform 0.25s ease;
-}
-.futbolargentino .tablazonab .noticiafutbolargentinosecundaria:hover {
-  transform: translateY(-3px);
-}
-.futbolargentino .tablazonab .noticiafutbolargentinosecundaria img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-.futbolargentino .resultadosycruces {
-  grid-area: resultadosycruces;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.futbolargentino .resultadosycruces .resultadosviernes,
-.futbolargentino .resultadosycruces .cruces {
-  background: #1a1a1a;
-  transition: box-shadow 0.25s ease;
-}
-.futbolargentino .resultadosycruces .resultadosviernes:hover,
-.futbolargentino .resultadosycruces .cruces:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-.futbolargentino .resultadosycruces .resultadosviernes ul li,
-.futbolargentino .resultadosycruces .cruces ul li {
-  color: #000;
-  font-weight: bold;
-}
-.futbolargentino .proximospartidos {
-  grid-area: proximospartidos;
-  background: #1a1a1a;
-  transition: box-shadow 0.25s ease;
-}
-.futbolargentino .proximospartidos:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-.futbolargentino .proximospartidos ul li {
-  color: #000;
-  font-weight: bold;
-}
-
-/* ANIMACIONES */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.futboleuropeo .contenedor {
-  display: grid;
-  grid-template-areas: "noticia-principal noticia-principal sidebar" "noticias-secundarias noticias-secundarias sidebar" "footer footer footer";
-  grid-template-columns: 2fr 2fr 1fr;
-  gap: 20px;
-  padding: 20px;
-}
-.futboleuropeo .noticiaprincipalchampions {
-  grid-area: noticia-principal;
-  background: #002244;
-  padding: 20px;
-  border-radius: 10px;
-  opacity: 0;
-  animation: fadeIn 0.7s ease forwards;
-}
-.futboleuropeo .noticiaprincipalchampions .championsleague {
-  border: 3px solid #7f17b7;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 70%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-.futboleuropeo .noticiaprincipalchampions .championsleague:hover {
-  transform: scale(1.03);
-}
-.futboleuropeo .noticiassecundariaschampions {
-  grid-area: noticias-secundarias;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-.futboleuropeo .noticiassecundariaschampions article {
-  background: #001a33;
-  padding: 15px;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: slideUp 0.6s ease forwards;
-  transition: box-shadow 0.3s ease;
-}
-.futboleuropeo .noticiassecundariaschampions article:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.futboleuropeo .noticiassecundariaschampions article img {
-  border: 3px solid #7f17b7;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-.futboleuropeo .noticiassecundariaschampions article img:hover {
-  transform: scale(1.04);
-}
-.futboleuropeo .sidebarchampions {
-  grid-area: sidebar;
-  background: #001122;
-  padding: 20px;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateX(10px);
-  animation: slideIn 0.7s ease forwards;
-}
-.futboleuropeo .sidebarchampions li {
-  color: #000407;
-  font-weight: bold;
-}
-
-/* KEYFRAMES */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-/* IMAGEN PRINCIPAL */
-.lavozdelhincha img.imagenprincipal {
-  width: 1000px;
-  border: 3px solid #4402c9;
-  display: block;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-  opacity: 0;
-  animation: fadeIn 0.8s ease forwards;
-}
-
-/* GRID DE NOTICIAS INDEX */
-.noticias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.noticias-grid article {
-  background-color: rgb(19, 18, 18);
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: slideUp 0.6s ease forwards;
-  transition: box-shadow 0.3s ease;
-}
-.noticias-grid article:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.noticias-grid img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.noticias-grid img:hover {
-  transform: scale(1.03);
-}
-.noticias-grid h3 {
-  margin: 10px;
-  color: #007a33;
-}
-.noticias-grid p {
-  margin: 10px;
-}
-
-/* KEYFRAMES */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

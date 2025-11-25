@@ -9,7 +9,6 @@
    BASE
 ========================== */
 @use "base/estilosglobales";
-@use "base/queries";
 
 /* ==========================
    COMPONENTS
@@ -36,7 +35,10 @@
 @use "pages/futboleuropeo";
 @use "pages/index";
 
-
+/* ==========================
+   QUERIES
+========================== */
+@use "base/queries";
 
 
 
