@@ -1054,7 +1054,7 @@ header .submenu:hover ul {
     align-items: center;
     padding: 10px;
   }
-  .noticiaprincipalchampions img .championsleague {
+  .noticiaprincipalchampions img.championsleague {
     width: 100%;
     height: auto;
     border-radius: 10px;
