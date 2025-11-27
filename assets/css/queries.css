@@ -133,50 +133,50 @@
     display: flex;
   }
   /* CONTENIDO PRINCIPAL */
-  .mainfutbolargentino {
+  .futbolargentino .mainfutbolargentino {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
-  .noticiafutbolargentinoprincipal img {
+  .futbolargentino .noticiafutbolargentinoprincipal img {
     width: 95%;
     height: auto;
     border-radius: 10px;
     margin: 10px 0;
   }
-  .noticiafutbolargentinoprincipal h2 {
+  .futbolargentino .noticiafutbolargentinoprincipal h2 {
     background-color: #141414;
   }
-  .tablazonab,
-  .resultadosycruces,
-  .proximospartidos {
+  .futbolargentino .tablazonab,
+  .futbolargentino .resultadosycruces,
+  .futbolargentino .proximospartidos {
     width: 95%;
     margin-top: 15px;
   }
-  .tablazonab table {
+  .futbolargentino .tablazonab table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
   }
-  .tablazonab th, .tablazonab td {
+  .futbolargentino .tablazonab th, .futbolargentino .tablazonab td {
     padding: 5px;
     text-align: center;
   }
-  .noticiafutbolargentinosecundaria img {
+  .futbolargentino .noticiafutbolargentinosecundaria img {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
   }
-  .resultadosviernes ul,
-  .cruces ul,
-  .proximospartidos ul {
+  .futbolargentino .resultadosviernes ul,
+  .futbolargentino .cruces ul,
+  .futbolargentino .proximospartidos ul {
     list-style: none;
     padding: 0;
   }
-  .resultadosviernes li,
-  .cruces li,
-  .proximospartidos li {
+  .futbolargentino .resultadosviernes li,
+  .futbolargentino .cruces li,
+  .futbolargentino .proximospartidos li {
     margin: 4px 0;
     background: #111;
     color: #fff;

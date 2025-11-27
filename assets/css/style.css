@@ -944,50 +944,50 @@ header .submenu:hover ul {
     display: flex;
   }
   /* CONTENIDO PRINCIPAL */
-  .mainfutbolargentino {
+  .futbolargentino .mainfutbolargentino {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
-  .noticiafutbolargentinoprincipal img {
+  .futbolargentino .noticiafutbolargentinoprincipal img {
     width: 95%;
     height: auto;
     border-radius: 10px;
     margin: 10px 0;
   }
-  .noticiafutbolargentinoprincipal h2 {
+  .futbolargentino .noticiafutbolargentinoprincipal h2 {
     background-color: #141414;
   }
-  .tablazonab,
-  .resultadosycruces,
-  .proximospartidos {
+  .futbolargentino .tablazonab,
+  .futbolargentino .resultadosycruces,
+  .futbolargentino .proximospartidos {
     width: 95%;
     margin-top: 15px;
   }
-  .tablazonab table {
+  .futbolargentino .tablazonab table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
   }
-  .tablazonab th, .tablazonab td {
+  .futbolargentino .tablazonab th, .futbolargentino .tablazonab td {
     padding: 5px;
     text-align: center;
   }
-  .noticiafutbolargentinosecundaria img {
+  .futbolargentino .noticiafutbolargentinosecundaria img {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
   }
-  .resultadosviernes ul,
-  .cruces ul,
-  .proximospartidos ul {
+  .futbolargentino .resultadosviernes ul,
+  .futbolargentino .cruces ul,
+  .futbolargentino .proximospartidos ul {
     list-style: none;
     padding: 0;
   }
-  .resultadosviernes li,
-  .cruces li,
-  .proximospartidos li {
+  .futbolargentino .resultadosviernes li,
+  .futbolargentino .cruces li,
+  .futbolargentino .proximospartidos li {
     margin: 4px 0;
     background: #111;
     color: #fff;
@@ -1048,26 +1048,27 @@ header .submenu:hover ul {
     display: flex;
   }
   /* CONTENIDO PRINCIPAL */
-  .contenedor {
+  .futboleuropeo .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
-  .noticiaprincipalchampions img.championsleague {
+  .futboleuropeo .noticiaprincipalchampions img.championsleague {
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin: 20px 0;
+    margin-left: 50px;
   }
-  .noticiassecundariaschampions {
+  .futboleuropeo .noticiassecundariaschampions {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     width: 95%;
   }
-  .noticiassecundariaschampions article {
+  .futboleuropeo .noticiassecundariaschampions article {
     background-color: #111;
     color: #fff;
     border-radius: 12px;
@@ -1075,12 +1076,12 @@ header .submenu:hover ul {
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
   }
-  .noticiassecundariaschampions img {
+  .futboleuropeo .noticiassecundariaschampions img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 8px;
   }
-  .sidebarchampions {
+  .futboleuropeo .sidebarchampions {
     width: 90%;
     background-color: #013220;
     color: #fff;
@@ -1088,11 +1089,11 @@ header .submenu:hover ul {
     margin-top: 15px;
     padding: 10px;
   }
-  .sidebarchampions ul {
+  .futboleuropeo .sidebarchampions ul {
     list-style: none;
     padding: 0;
   }
-  .sidebarchampions li {
+  .futboleuropeo .sidebarchampions li {
     background-color: #ffffff;
     margin: 4px 0;
     padding: 6px;

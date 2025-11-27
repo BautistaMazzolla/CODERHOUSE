@@ -161,63 +161,64 @@
   }
 
   /* CONTENIDO PRINCIPAL */
-  .mainfutbolargentino {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+.futbolargentino .mainfutbolargentino {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
 
-  .noticiafutbolargentinoprincipal img {
-    width: 95%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px 0;
-  }
+.futbolargentino .noticiafutbolargentinoprincipal img {
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+}
 
-.noticiafutbolargentinoprincipal h2 {
+.futbolargentino .noticiafutbolargentinoprincipal h2 {
   background-color: #141414;
 }
-  .tablazonab, 
-  .resultadosycruces,
-  .proximospartidos {
-    width: 95%;
-    margin-top: 15px;
-  }
 
-  .tablazonab table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
+.futbolargentino .tablazonab, 
+.futbolargentino .resultadosycruces,
+.futbolargentino .proximospartidos {
+  width: 95%;
+  margin-top: 15px;
+}
 
-  .tablazonab th, .tablazonab td {
-    padding: 5px;
-    text-align: center;
-  }
+.futbolargentino .tablazonab table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
 
-  .noticiafutbolargentinosecundaria img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-  }
+.futbolargentino .tablazonab th, .futbolargentino .tablazonab td {
+  padding: 5px;
+  text-align: center;
+}
 
-  .resultadosviernes ul,
-  .cruces ul,
-  .proximospartidos ul {
-    list-style: none;
-    padding: 0;
-  }
+.futbolargentino .noticiafutbolargentinosecundaria img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
-  .resultadosviernes li,
-  .cruces li,
-  .proximospartidos li {
-    margin: 4px 0;
-    background: #111;
-    color: #fff;
-    padding: 6px;
-    border-radius: 6px;
-  }
+.futbolargentino .resultadosviernes ul,
+.futbolargentino .cruces ul,
+.futbolargentino .proximospartidos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.futbolargentino .resultadosviernes li,
+.futbolargentino .cruces li,
+.futbolargentino .proximospartidos li {
+  margin: 4px 0;
+  background: #111;
+  color: #fff;
+  padding: 6px;
+  border-radius: 6px;
+}
 }
 
 
@@ -284,64 +285,65 @@
   }
 
   /* CONTENIDO PRINCIPAL */
-  
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
 
-  .noticiaprincipalchampions img.championsleague {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-  }
+.futboleuropeo .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
 
-  .noticiassecundariaschampions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 95%;
-  }
+.futboleuropeo .noticiaprincipalchampions img.championsleague {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  margin-left: 50px;
+}
 
-  .noticiassecundariaschampions article {
-    background-color: #111;
-    color: #fff;
-    border-radius: 12px;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
-  }
+.futboleuropeo .noticiassecundariaschampions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 95%;
+}
 
-  .noticiassecundariaschampions img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 8px;
-  }
+.futboleuropeo .noticiassecundariaschampions article {
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
 
-  .sidebarchampions {
-    width: 90%;
-    background-color: #013220;
-    color: #fff;
-    border-radius: 10px;
-    margin-top: 15px;
-    padding: 10px;
-  }
+.futboleuropeo .noticiassecundariaschampions img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
 
-  .sidebarchampions ul {
-    list-style: none;
-    padding: 0;
-  }
+.futboleuropeo .sidebarchampions {
+  width: 90%;
+  background-color: #013220;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+}
 
-  .sidebarchampions li {
-    background-color: #ffffff;
-    margin: 4px 0;
-    padding: 6px;
-    border-radius: 6px;
-  }
+.futboleuropeo .sidebarchampions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.futboleuropeo .sidebarchampions li {
+  background-color: #ffffff;
+  margin: 4px 0;
+  padding: 6px;
+  border-radius: 6px;
+}
 }
 
 
